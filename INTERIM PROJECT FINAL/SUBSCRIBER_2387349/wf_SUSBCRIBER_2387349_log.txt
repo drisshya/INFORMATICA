@@ -1,0 +1,26 @@
+2025-03-13 16:11:03 : INFO : (4024 | 8696) : (IS | IS) : node01 : LM_36435 : Starting execution of workflow [wf_SUSBCRIBER_2387349] in folder [SUBGROUP] last saved by user [Administrator].
+2025-03-13 16:11:03 : INFO : (4024 | 8696) : (IS | IS) : node01 : LM_44206 : Workflow wf_SUSBCRIBER_2387349 started with run id [95], run instance name [], run type [Concurrent Run Disabled].
+2025-03-13 16:11:03 : INFO : (4024 | 8696) : (IS | IS) : node01 : LM_44195 : Workflow [wf_SUSBCRIBER_2387349] service level [SLPriority:5,SLDispatchWaitTime:1800].
+2025-03-13 16:11:03 : INFO : (4024 | 8696) : (IS | IS) : node01 : LM_44253 : Workflow started. Clients will be notified
+2025-03-13 16:11:03 : INFO : (4024 | 8696) : (IS | IS) : node01 : LM_36330 : Start task instance [Start]: Execution started.
+2025-03-13 16:11:03 : INFO : (4024 | 8696) : (IS | IS) : node01 : LM_36318 : Start task instance [Start]: Execution succeeded.
+2025-03-13 16:11:03 : INFO : (4024 | 8696) : (IS | IS) : node01 : LM_36505 : Link [Start --> s_m_Subscriber_2387349]: empty expression string, evaluated to TRUE.
+2025-03-13 16:11:03 : INFO : (4024 | 8696) : (IS | IS) : node01 : LM_36388 : Session task instance [s_m_Subscriber_2387349] is waiting to be started.
+2025-03-13 16:11:03 : INFO : (4024 | 5500) : (IS | IS) : node01 : LM_36682 : Session task instance [s_m_Subscriber_2387349]: started a process with pid [11832] on node [node01].
+2025-03-13 16:11:03 : INFO : (4024 | 5500) : (IS | IS) : node01 : LM_36330 : Session task instance [s_m_Subscriber_2387349]: Execution started.
+2025-03-13 16:11:04 : INFO : (4024 | 8720) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_Subscriber_2387349] : [TM_6793 Fetching initialization properties from the Integration Service. : (Thu Mar 13 16:11:03 2025)]
+2025-03-13 16:11:04 : INFO : (4024 | 8720) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_Subscriber_2387349] : [DISP_20305 The [Preparer] DTM with process id [11832] is running on node [node01].
+ : (Thu Mar 13 16:11:03 2025)]
+2025-03-13 16:11:04 : INFO : (4024 | 8720) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_Subscriber_2387349] : [PETL_24036 Beginning the prepare phase for the session.]
+2025-03-13 16:11:04 : INFO : (4024 | 8720) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_Subscriber_2387349] : [TM_6721 Started [Connect to Repository].]
+2025-03-13 16:11:04 : INFO : (4024 | 8720) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_Subscriber_2387349] : [TM_6722 Finished [Connect to Repository].  It took [0.136993] seconds.]
+2025-03-13 16:11:04 : INFO : (4024 | 8720) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_Subscriber_2387349] : [TM_6794 Connected to repository [REP] in domain [Domain] as user [Administrator] in security domain [Native].]
+2025-03-13 16:11:04 : INFO : (4024 | 8720) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_Subscriber_2387349] : [TM_6721 Started [Fetch Session from Repository].]
+2025-03-13 16:11:04 : INFO : (4024 | 8720) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_Subscriber_2387349] : [TM_6722 Finished [Fetch Session from Repository].  It took [0.183967] seconds.]
+2025-03-13 16:11:04 : INFO : (4024 | 8720) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_Subscriber_2387349] : [TT_11094 The Lookup transformation [LKPTRANS] requires that a string or binary lookup port and an input port in any lookup condition have the same length. Since lookup port [GROUP_ID] had a length of [8] and input port [NEW_GRP_ID1] had a length of [10], the larger length for both ports is used.]
+2025-03-13 16:11:04 : INFO : (4024 | 8720) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_Subscriber_2387349] : [TM_6721 Started [Partition Group Formation].]
+2025-03-13 16:11:04 : INFO : (4024 | 8720) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_Subscriber_2387349] : [TM_6722 Finished [Partition Group Formation].  It took [0.024004] seconds.]
+2025-03-13 16:11:04 : INFO : (4024 | 8720) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_Subscriber_2387349] : [PETL_24037 Finished the prepare phase for the session.]
+2025-03-13 16:11:04 : INFO : (4024 | 8720) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_Subscriber_2387349] : [TM_6792 Notifying the Integration Service that the prepare phase has been completed. : (Thu Mar 13 16:11:04 2025)]
+2025-03-13 16:11:05 : INFO : (4024 | 7552) : (IS | IS) : node01 : LM_36318 : Session task instance [s_m_Subscriber_2387349]: Execution succeeded.
+2025-03-13 16:11:06 : INFO : (4024 | 8696) : (IS | IS) : node01 : LM_36318 : Workflow [wf_SUSBCRIBER_2387349]: Execution succeeded.
