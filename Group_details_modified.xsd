@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:element name="GroupDetails">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="GroupName" type="xs:string"/>
+<xs:element name="Street" type="xs:string"/>
+<xs:element name="City" type="xs:string"/>
+<xs:element name="State" type="xs:string"/>
+<xs:element name="Zip" type="xs:string"/>
+<xs:element name="Subgrp" minOccurs="0" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="SubgrpID" type="xs:string"/>  <!-- Changed to string -->
+<xs:element name="SubgrpName" type="xs:string"/>
+<xs:element name="Subscriber" minOccurs="0" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="SubID" type="xs:string"/>  <!-- Changed to string -->
+<xs:element name="LastName" type="xs:string"/>
+<xs:element name="FirstName" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:schema>
