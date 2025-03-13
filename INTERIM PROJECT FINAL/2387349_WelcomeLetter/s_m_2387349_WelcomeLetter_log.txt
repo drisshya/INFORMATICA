@@ -1,0 +1,205 @@
+2025-03-13 23:43:05 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : TM_6014 : Initializing session [s_m_2387349_WelcomeLetter] at [Thu Mar 13 23:43:05 2025].
+2025-03-13 23:43:05 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : TM_6683 : Repository Name: [REP]
+2025-03-13 23:43:05 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : TM_6684 : Server Name: [IS]
+2025-03-13 23:43:05 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : TM_6686 : Folder: [SUBGROUP]
+2025-03-13 23:43:05 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : TM_6685 : Workflow: [wf_2387349_WelcomeLetter] Run Instance Name: [] Run Id: [98]
+2025-03-13 23:43:05 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : TM_6992 : Operating System Type [NT]
+2025-03-13 23:43:05 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : TM_6101 : Mapping name: m_2387349_WelcomeLetter.
+2025-03-13 23:43:05 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : TM_6964 : Date format for the Session is [MM/DD/YYYY HH24:MI:SS.US]
+2025-03-13 23:43:05 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : TM_6708 : Using configuration property [EnableDataEncryption,no]
+2025-03-13 23:43:05 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : TM_6708 : Using configuration property [StoreHAPersistenceInDB,no]
+2025-03-13 23:43:05 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : TM_6703 : Session [s_m_2387349_WelcomeLetter] is run by 64-bit Integration Service  [node01], version [10.5.2], build [0322].
+2025-03-13 23:43:05 : INFO : (3056 | MANAGER) : (IS | IS) : node01 : PETL_24091 : Thread [MANAGER] has the ID [1].
+2025-03-13 23:43:05 : INFO : (3056 | MANAGER) : (IS | IS) : node01 : PETL_24058 : Running Partition Group [1].
+2025-03-13 23:43:05 : INFO : (3056 | MANAGER) : (IS | IS) : node01 : PETL_24000 : Parallel Pipeline Engine initializing.
+2025-03-13 23:43:05 : INFO : (3056 | MONITOR) : (IS | IS) : node01 : PETL_24091 : Thread [MONITOR] has the ID [2].
+2025-03-13 23:43:05 : INFO : (3056 | MANAGER) : (IS | IS) : node01 : PETL_24001 : Parallel Pipeline Engine running.
+2025-03-13 23:43:05 : INFO : (3056 | MANAGER) : (IS | IS) : node01 : PETL_24003 : Initializing session run.
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : PETL_24091 : Thread [MAPPING] has the ID [3].
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : CMN_1569 : Server Mode: [ASCII]
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : CMN_1570 : Server Code page: [MS Windows Latin 1 (ANSI), superset of Latin1]
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : TM_6151 : The session sort order is [Binary].
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : CMN_65110 : Current Timezone:[UTC +5:30]
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : CMN_65112 : Current Process ID:[3056]
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : TM_6156 : Using low precision processing.
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : TM_6180 : Deadlock retry logic will not be implemented.
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : TM_6187 : Session target-based commit interval is [10000].
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : TM_6307 : DTM error log disabled. 
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : TE_7022 : TShmWriter: Initialized
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : XMLW_31071 : Warning! No tag will be generated for NULL data for XML target [Group_details_modified].
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : XMLW_31119 : No attribute tags will be generated for NULL data for XML target [Group_details_modified].
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : DBG_21692 : Group_details_modified: Cache size = [335544320]
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : DBG_21694 : JNRTRANS1 Partition [0]: Index cache size = [33554432], Data cache size = [67108864]
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : TT_11098 : The Joiner transformation [JNRTRANS1] is configured with the join algorithm: Nested-Loop.
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : DBG_21694 : JNRTRANS Partition [0]: Index cache size = [33554432], Data cache size = [67108864]
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : TT_11098 : The Joiner transformation [JNRTRANS] is configured with the join algorithm: Nested-Loop.
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : TM_6007 : DTM initialized successfully for session [s_m_2387349_WelcomeLetter]
+2025-03-13 23:43:05 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : PETL_24033 : All DTM Connection Info: [<NONE>].
+2025-03-13 23:43:05 : INFO : (3056 | MANAGER) : (IS | IS) : node01 : PETL_24004 : PETL_24004 Starting pre-session tasks. : (Thu Mar 13 23:43:05 2025)
+2025-03-13 23:43:05 : INFO : (3056 | PRE-SESS) : (IS | IS) : node01 : PETL_24091 : Thread [PRE-SESS] has the ID [4].
+2025-03-13 23:43:05 : INFO : (3056 | MANAGER) : (IS | IS) : node01 : PETL_24027 : PETL_24027 Pre-session task completed successfully. : (Thu Mar 13 23:43:05 2025)
+2025-03-13 23:43:05 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : PETL_24006 : Starting data movement.
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : TM_6660 : Total Buffer Pool size is 3658944 bytes and Block size is 65536 bytes.
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_1_1) : (IS | IS) : node01 : PETL_24091 : Thread [READER_1_1_1] has the ID [5].
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_1_1) : (IS | IS) : node01 : DBG_21438 : Reader: Source is [orcl], Type [Oracle], User [system]
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_1_1) : (IS | IS) : node01 : BLKR_16003 : Initialization completed successfully.
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_1_1) : (IS | IS) : node01 : PETL_24091 : Thread [TRANSF_1_1_1] has the ID [6].
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_2_1) : (IS | IS) : node01 : PETL_24091 : Thread [READER_1_2_1] has the ID [7].
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_2_1) : (IS | IS) : node01 : DBG_21438 : Reader: Source is [orcl], Type [Oracle], User [system]
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_2_1) : (IS | IS) : node01 : BLKR_16003 : Initialization completed successfully.
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_2_1) : (IS | IS) : node01 : PETL_24091 : Thread [TRANSF_1_2_1] has the ID [8].
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_3_1) : (IS | IS) : node01 : PETL_24091 : Thread [READER_1_3_1] has the ID [9].
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_3_1) : (IS | IS) : node01 : DBG_21438 : Reader: Source is [orcl], Type [Oracle], User [system]
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_3_1) : (IS | IS) : node01 : BLKR_16003 : Initialization completed successfully.
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_3_1) : (IS | IS) : node01 : PETL_24091 : Thread [TRANSF_1_3_1] has the ID [10].
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : PETL_24091 : Thread [WRITER_1_*_1] has the ID [11].
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : WRT_8270 : Target connection group #1 consists of target(s) [Group_details_modified::X_GroupDetails]
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : WRT_8270 : Target connection group #2 consists of target(s) [Group_details_modified::X_Subgrp]
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : WRT_8270 : Target connection group #3 consists of target(s) [Group_details_modified::X_Subscriber]
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : WRT_8003 : Writer initialization complete.
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_1_1) : (IS | IS) : node01 : BLKR_16007 : Reader run started.
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_3_1) : (IS | IS) : node01 : BLKR_16007 : Reader run started.
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : WRT_8005 : Writer run started.
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : WRT_8158 : 
+
+*****START LOAD SESSION*****
+
+Load Start Time: Thu Mar 13 23:43:05 2025
+
+Target tables:
+
+     Group_details_modified::X_GroupDetails
+     Group_details_modified::X_Subgrp
+     Group_details_modified::X_Subscriber
+
+
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_3_1) : (IS | IS) : node01 : RR_4010 : SQ instance [SQ_SUBGRP_2387349] SQL Query [SELECT SUBGRP_2387349.SUBGRP_SK, SUBGRP_2387349.SUBGRP_ID, SUBGRP_2387349.SUBGRP_NAME, SUBGRP_2387349.EFF_DT, SUBGRP_2387349.TERM_DT, SUBGRP_2387349.GROUP_ID FROM SUBGRP_2387349]
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_2_1) : (IS | IS) : node01 : BLKR_16007 : Reader run started.
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_1_1) : (IS | IS) : node01 : RR_4010 : SQ instance [SQ_SUBSCRIBER_2387349] SQL Query [SELECT SUBSCRIBER_2387349.SUB_ID, SUBSCRIBER_2387349.LAST_NAME, SUBSCRIBER_2387349.FIRST_NAME, SUBSCRIBER_2387349.GENDER, SUBSCRIBER_2387349.BIRTH_DT, SUBSCRIBER_2387349.SUBGRP_ID, SUBSCRIBER_2387349.GRP_ID FROM SUBSCRIBER_2387349]
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_3_1) : (IS | IS) : node01 : RR_4049 : RR_4049 SQL Query issued to database : (Thu Mar 13 23:43:05 2025)
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_2_1) : (IS | IS) : node01 : RR_4010 : SQ instance [SQ_GROUP_2387349] SQL Query [SELECT GROUP_2387349.GRP_SK, GROUP_2387349.GROUP_ID, GROUP_2387349.GROUP_NAME, GROUP_2387349.EFF_DT, GROUP_2387349.TERM_DT, GROUP_2387349.STREET, GROUP_2387349.CITY, GROUP_2387349.STATE, GROUP_2387349.ZIP FROM GROUP_2387349]
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_1_1) : (IS | IS) : node01 : RR_4049 : RR_4049 SQL Query issued to database : (Thu Mar 13 23:43:05 2025)
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_3_1) : (IS | IS) : node01 : BLKR_16019 : Read [0] rows, read [0] error rows for source table [SUBGRP_2387349] instance name [SUBGRP_2387349]
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_3_1) : (IS | IS) : node01 : BLKR_16008 : Reader run completed.
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_1_1) : (IS | IS) : node01 : BLKR_16019 : Read [0] rows, read [0] error rows for source table [SUBSCRIBER_2387349] instance name [SUBSCRIBER_2387349]
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_1_1) : (IS | IS) : node01 : BLKR_16008 : Reader run completed.
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_2_1) : (IS | IS) : node01 : RR_4049 : RR_4049 SQL Query issued to database : (Thu Mar 13 23:43:05 2025)
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_2_1) : (IS | IS) : node01 : BLKR_16019 : Read [0] rows, read [0] error rows for source table [GROUP_2387349] instance name [GROUP_2387349]
+2025-03-13 23:43:05 : INFO : (3056 | READER_1_2_1) : (IS | IS) : node01 : BLKR_16008 : Reader run completed.
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_3_1) : (IS | IS) : node01 : DBG_21077 : DBG_21077 Create joiner cache on master relation : (Thu Mar 13 23:43:05 2025)
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_1_1) : (IS | IS) : node01 : DBG_21077 : DBG_21077 Create joiner cache on master relation : (Thu Mar 13 23:43:05 2025)
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_3_1) : (IS | IS) : node01 : TE_7212 : Increasing [Index Cache] size for transformation [JNRTRANS] from [33554432] to [33556800].
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_3_1) : (IS | IS) : node01 : TE_7212 : Increasing [Data Cache] size for transformation [JNRTRANS] from [67108864] to [67109344].
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_1_1) : (IS | IS) : node01 : TE_7212 : Increasing [Index Cache] size for transformation [JNRTRANS1] from [33554432] to [33555200].
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_1_1) : (IS | IS) : node01 : TE_7212 : Increasing [Data Cache] size for transformation [JNRTRANS1] from [67108864] to [67109216].
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_1_1) : (IS | IS) : node01 : CMN_1690 : Created new data file [C:\Informatica\10.5.2\server\infa_shared\Cache\PMJNR54_6_0_98.dat] and index file [C:\Informatica\10.5.2\server\infa_shared\Cache\PMJNR54_6_0_98.idx] for Joiner [JNRTRANS1].
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_1_1) : (IS | IS) : node01 : DBG_21214 : DBG_21214 Finished joiner cache on master relation : (Thu Mar 13 23:43:05 2025)
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_1_1) : (IS | IS) : node01 : DBG_21216 : Finished transformations for Source Qualifier [SQ_SUBSCRIBER_2387349]. Total errors [0] 
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_3_1) : (IS | IS) : node01 : CMN_1690 : Created new data file [C:\Informatica\10.5.2\server\infa_shared\Cache\PMJNR54_5_0_98.dat] and index file [C:\Informatica\10.5.2\server\infa_shared\Cache\PMJNR54_5_0_98.idx] for Joiner [JNRTRANS].
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_3_1) : (IS | IS) : node01 : DBG_21214 : DBG_21214 Finished joiner cache on master relation : (Thu Mar 13 23:43:05 2025)
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_3_1) : (IS | IS) : node01 : DBG_21216 : Finished transformations for Source Qualifier [SQ_SUBGRP_2387349]. Total errors [0] 
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_2_1) : (IS | IS) : node01 : DBG_21273 : Joiner transform : JNRTRANS
+
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_2_1) : (IS | IS) : node01 : CMN_1103 : WARNING : No row found from the master relation. Joiner will not produce any output row.
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_2_1) : (IS | IS) : node01 : DBG_21603 : DBG_21603 Open master relation cache for detail joiner : (Thu Mar 13 23:43:05 2025)
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_2_1) : (IS | IS) : node01 : DBG_21273 : Joiner transform : JNRTRANS1
+
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_2_1) : (IS | IS) : node01 : CMN_1103 : WARNING : No row found from the master relation. Joiner will not produce any output row.
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_2_1) : (IS | IS) : node01 : DBG_21603 : DBG_21603 Open master relation cache for detail joiner : (Thu Mar 13 23:43:05 2025)
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : WRT_8167 : Start loading table [Group_details_modified::X_GroupDetails] at: Thu Mar 13 23:43:05 2025
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_2_1) : (IS | IS) : node01 : DBG_21215 : DBG_21215 Finished processing detail relation : (Thu Mar 13 23:43:05 2025)
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_2_1) : (IS | IS) : node01 : CMN_1795 : The index cache size that would hold [0] input rows from the master for [JNRTRANS1], in memory, is [0] bytes
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_2_1) : (IS | IS) : node01 : CMN_1794 : The data cache size that would hold [0] input rows from the master for [JNRTRANS1], in memory, is [608] bytes
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : WRT_8167 : Start loading table [Group_details_modified::X_Subgrp] at: Thu Mar 13 23:43:05 2025
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : WRT_8167 : Start loading table [Group_details_modified::X_Subscriber] at: Thu Mar 13 23:43:05 2025
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : WRT_8168 : End loading table [Group_details_modified::X_GroupDetails] at: Thu Mar 13 23:43:05 2025
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : WRT_8168 : End loading table [Group_details_modified::X_Subgrp] at: Thu Mar 13 23:43:05 2025
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : XMLW_31025 : Opened file [C:\Users\Administrator\Downloads\2387349_WelcomeLetter\WelcomeLetter_2387349.xsd] for XML output
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : XMLW_31037 : XMLW_31037 Received all the data for all the XML groups of target [Group_details_modified]. Combining XML groups into final DOM tree... : (Thu Mar 13 23:43:05 2025)
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_2_1) : (IS | IS) : node01 : DBG_21215 : DBG_21215 Finished processing detail relation : (Thu Mar 13 23:43:05 2025)
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_2_1) : (IS | IS) : node01 : CMN_1795 : The index cache size that would hold [0] input rows from the master for [JNRTRANS], in memory, is [0] bytes
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_2_1) : (IS | IS) : node01 : CMN_1794 : The data cache size that would hold [0] input rows from the master for [JNRTRANS], in memory, is [536] bytes
+2025-03-13 23:43:05 : INFO : (3056 | TRANSF_1_2_1) : (IS | IS) : node01 : DBG_21216 : Finished transformations for Source Qualifier [SQ_GROUP_2387349]. Total errors [0] 
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : XMLW_31036 : XMLW_31036 
+===========================
+LOAD SUMMARY for XML target [Group_details_modified].
+===========================
+[
+XMLW_31033 Detailed load statistics for XML group [X_GroupDetails]:
+XMLW_31034 No output data produced - there were no input rows received by XML Writer for this XML group.
+
+XMLW_31033 Detailed load statistics for XML group [X_Subgrp]:
+XMLW_31034 No output data produced - there were no input rows received by XML Writer for this XML group.
+
+XMLW_31033 Detailed load statistics for XML group [X_Subscriber]:
+XMLW_31034 No output data produced - there were no input rows received by XML Writer for this XML group.
+
+
+XMLW_31035 No output data produced for this XML target.
+]
+
+ : (Thu Mar 13 23:43:05 2025)
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : WRT_8168 : End loading table [Group_details_modified::X_Subscriber] at: Thu Mar 13 23:43:05 2025
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : WRT_8035 : Load complete time: Thu Mar 13 23:43:05 2025
+
+LOAD SUMMARY
+============
+
+WRT_8036 Target: Group_details_modified::X_GroupDetails (Instance Name: [Group_details_modified])
+WRT_8044 No data loaded for this target
+
+
+WRT_8036 Target: Group_details_modified::X_Subgrp (Instance Name: [Group_details_modified])
+WRT_8044 No data loaded for this target
+
+
+WRT_8036 Target: Group_details_modified::X_Subscriber (Instance Name: [Group_details_modified])
+WRT_8044 No data loaded for this target
+
+
+
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : WRT_8043 : *****END LOAD SESSION*****
+2025-03-13 23:43:05 : INFO : (3056 | WRITER_1_*_1) : (IS | IS) : node01 : WRT_8006 : Writer run completed.
+2025-03-13 23:43:05 : INFO : (3056 | MANAGER) : (IS | IS) : node01 : PETL_24031 : 
+***** RUN INFO FOR TGT LOAD ORDER GROUP [1], CONCURRENT SET [1] *****
+Thread [READER_1_1_1] created for [the read stage] of partition point [SQ_SUBSCRIBER_2387349] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [TRANSF_1_1_1] created for [the transformation stage] of partition point [SQ_SUBSCRIBER_2387349] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [READER_1_2_1] created for [the read stage] of partition point [SQ_GROUP_2387349] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [TRANSF_1_2_1] created for [the transformation stage] of partition point [SQ_GROUP_2387349] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [READER_1_3_1] created for [the read stage] of partition point [SQ_SUBGRP_2387349] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [TRANSF_1_3_1] created for [the transformation stage] of partition point [SQ_SUBGRP_2387349] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [WRITER_1_*_1] created for [the write stage] of partition point [Group_details_modified] has completed. The total run time was insufficient for any meaningful statistics.
+
+2025-03-13 23:43:05 : INFO : (3056 | MANAGER) : (IS | IS) : node01 : PETL_24005 : PETL_24005 Starting post-session tasks. : (Thu Mar 13 23:43:05 2025)
+2025-03-13 23:43:05 : INFO : (3056 | POST-SESS) : (IS | IS) : node01 : PETL_24091 : Thread [POST-SESS] has the ID [12].
+2025-03-13 23:43:05 : INFO : (3056 | MANAGER) : (IS | IS) : node01 : PETL_24029 : PETL_24029 Post-session task completed successfully. : (Thu Mar 13 23:43:05 2025)
+2025-03-13 23:43:05 : INFO : (3056 | MAPPING) : (IS | IS) : node01 : TM_6018 : The session completed with [0] row transformation errors. 
+2025-03-13 23:43:06 : INFO : (3056 | MANAGER) : (IS | IS) : node01 : TE_7216 : Deleting cache files [C:\Informatica\10.5.2\server\infa_shared\Cache\PMJNR54_6_0_98.dat] for transformation [JNRTRANS1].
+2025-03-13 23:43:06 : INFO : (3056 | MANAGER) : (IS | IS) : node01 : TE_7216 : Deleting cache files [C:\Informatica\10.5.2\server\infa_shared\Cache\PMJNR54_6_0_98.idx] for transformation [JNRTRANS1].
+2025-03-13 23:43:06 : INFO : (3056 | MANAGER) : (IS | IS) : node01 : TE_7216 : Deleting cache files [C:\Informatica\10.5.2\server\infa_shared\Cache\PMJNR54_5_0_98.dat] for transformation [JNRTRANS].
+2025-03-13 23:43:06 : INFO : (3056 | MANAGER) : (IS | IS) : node01 : TE_7216 : Deleting cache files [C:\Informatica\10.5.2\server\infa_shared\Cache\PMJNR54_5_0_98.idx] for transformation [JNRTRANS].
+2025-03-13 23:43:06 : INFO : (3056 | MANAGER) : (IS | IS) : node01 : PETL_24002 : Parallel Pipeline Engine finished.
+2025-03-13 23:43:06 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : PETL_24012 : Session run completed successfully.
+2025-03-13 23:43:06 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : TM_6022 : 
+
+SESSION LOAD SUMMARY
+================================================
+
+2025-03-13 23:43:06 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : TM_6252 : Source Load Summary.
+2025-03-13 23:43:06 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : CMN_1740 : Table: [SQ_SUBSCRIBER_2387349] (Instance Name: [SQ_SUBSCRIBER_2387349])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+2025-03-13 23:43:06 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : CMN_1740 : Table: [SQ_GROUP_2387349] (Instance Name: [SQ_GROUP_2387349])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+2025-03-13 23:43:06 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : CMN_1740 : Table: [SQ_SUBGRP_2387349] (Instance Name: [SQ_SUBGRP_2387349])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+2025-03-13 23:43:06 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : TM_6253 : Target Load Summary.
+2025-03-13 23:43:06 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : CMN_1537 : Table: [Group_details_modified] (Instance Name: [Group_details_modified]) with group id[1] with view name [X_GroupDetails]
+	 Rows Output [1], Rows Affected [1], Rows Applied [1], Rows Rejected[0]
+2025-03-13 23:43:06 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : CMN_1537 : Table: [Group_details_modified] (Instance Name: [Group_details_modified]) with group id[2] with view name [X_Subgrp]
+	 Rows Output [0], Rows Affected [0], Rows Applied [0], Rows Rejected[0]
+2025-03-13 23:43:06 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : CMN_1537 : Table: [Group_details_modified] (Instance Name: [Group_details_modified]) with group id[3] with view name [X_Subscriber]
+	 Rows Output [0], Rows Affected [0], Rows Applied [0], Rows Rejected[0]
+2025-03-13 23:43:06 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : TM_6023 : 
+===================================================
+
+2025-03-13 23:43:06 : INFO : (3056 | DIRECTOR) : (IS | IS) : node01 : TM_6020 : Session [s_m_2387349_WelcomeLetter] completed at [Thu Mar 13 23:43:06 2025].
