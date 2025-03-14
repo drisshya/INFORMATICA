@@ -1,0 +1,11 @@
+StudentId,StudentName,Subject,Marks
+1,Ravi,Mathematica,45
+1,Ravi,English,35
+1,Ravi,Physics,49
+2,Devi,Mathematics,49
+2,Devi,English,49
+2,Devi,Physics,49
+3,Tom,Mathematics,35
+3,Tom,English,35
+3,Tom,Physics,35
+4,Priya,Mathematics,48

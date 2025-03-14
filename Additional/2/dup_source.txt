@@ -1,0 +1,9 @@
+Customer_ID,Customer_Name,Account_Number,Balance
+101,John Doe,123456,5000.00
+102,Alice Smith,789012,7000.50
+103,Bob Johnson,345678,12000.75
+101,John Doe,123456,5000.00
+104,Charlie Brown,901234,1500.00
+105,Emma Wilson,567890,8000.25
+102,Alice Smith,789012,7000.50
+106,Olivia Taylor,246810,11000.90

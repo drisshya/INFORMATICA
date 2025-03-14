@@ -1,0 +1,25 @@
+2025-03-11 09:24:26 : INFO : (11224 | 3616) : (IS | IS) : node01 : LM_36435 : Starting execution of workflow [wf_stud_add] in folder [Test] last saved by user [Administrator].
+2025-03-11 09:24:26 : INFO : (11224 | 3616) : (IS | IS) : node01 : LM_44206 : Workflow wf_stud_add started with run id [46], run instance name [], run type [Concurrent Run Disabled].
+2025-03-11 09:24:26 : INFO : (11224 | 3616) : (IS | IS) : node01 : LM_44195 : Workflow [wf_stud_add] service level [SLPriority:5,SLDispatchWaitTime:1800].
+2025-03-11 09:24:26 : INFO : (11224 | 3616) : (IS | IS) : node01 : LM_44253 : Workflow started. Clients will be notified
+2025-03-11 09:24:26 : INFO : (11224 | 3616) : (IS | IS) : node01 : LM_36330 : Start task instance [Start]: Execution started.
+2025-03-11 09:24:26 : INFO : (11224 | 3616) : (IS | IS) : node01 : LM_36318 : Start task instance [Start]: Execution succeeded.
+2025-03-11 09:24:26 : INFO : (11224 | 3616) : (IS | IS) : node01 : LM_36505 : Link [Start --> s_m_stud_add]: empty expression string, evaluated to TRUE.
+2025-03-11 09:24:26 : INFO : (11224 | 3616) : (IS | IS) : node01 : LM_36388 : Session task instance [s_m_stud_add] is waiting to be started.
+2025-03-11 09:24:26 : INFO : (11224 | 3616) : (IS | IS) : node01 : LM_36682 : Session task instance [s_m_stud_add]: started a process with pid [9572] on node [node01].
+2025-03-11 09:24:26 : INFO : (11224 | 3616) : (IS | IS) : node01 : LM_36330 : Session task instance [s_m_stud_add]: Execution started.
+2025-03-11 09:24:27 : INFO : (11224 | 6640) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_stud_add] : [TM_6793 Fetching initialization properties from the Integration Service. : (Tue Mar 11 09:24:26 2025)]
+2025-03-11 09:24:27 : INFO : (11224 | 6640) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_stud_add] : [DISP_20305 The [Preparer] DTM with process id [9572] is running on node [node01].
+ : (Tue Mar 11 09:24:26 2025)]
+2025-03-11 09:24:27 : INFO : (11224 | 6640) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_stud_add] : [PETL_24036 Beginning the prepare phase for the session.]
+2025-03-11 09:24:27 : INFO : (11224 | 6640) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_stud_add] : [TM_6721 Started [Connect to Repository].]
+2025-03-11 09:24:27 : INFO : (11224 | 6640) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_stud_add] : [TM_6722 Finished [Connect to Repository].  It took [0.113002] seconds.]
+2025-03-11 09:24:27 : INFO : (11224 | 6640) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_stud_add] : [TM_6794 Connected to repository [REP] in domain [Domain] as user [Administrator] in security domain [Native].]
+2025-03-11 09:24:27 : INFO : (11224 | 6640) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_stud_add] : [TM_6721 Started [Fetch Session from Repository].]
+2025-03-11 09:24:27 : INFO : (11224 | 6640) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_stud_add] : [TM_6722 Finished [Fetch Session from Repository].  It took [0.136002] seconds.]
+2025-03-11 09:24:27 : INFO : (11224 | 6640) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_stud_add] : [TM_6721 Started [Partition Group Formation].]
+2025-03-11 09:24:27 : INFO : (11224 | 6640) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_stud_add] : [TM_6722 Finished [Partition Group Formation].  It took [0.0180001] seconds.]
+2025-03-11 09:24:27 : INFO : (11224 | 6640) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_stud_add] : [PETL_24037 Finished the prepare phase for the session.]
+2025-03-11 09:24:27 : INFO : (11224 | 6640) : (IS | IS) : node01 : LM_36488 : Session task instance [s_m_stud_add] : [TM_6792 Notifying the Integration Service that the prepare phase has been completed. : (Tue Mar 11 09:24:27 2025)]
+2025-03-11 09:24:28 : INFO : (11224 | 4732) : (IS | IS) : node01 : LM_36318 : Session task instance [s_m_stud_add]: Execution succeeded.
+2025-03-11 09:24:32 : INFO : (11224 | 4928) : (IS | IS) : node01 : LM_36318 : Workflow [wf_stud_add]: Execution succeeded.
