@@ -1,0 +1,21 @@
+> OIE_002 INFO 2025-04-04T03:46:44.668Z Starting export operation.
+Execution Client: UI
+Job Name: Ex1_Replication-1743738931762
+Organization: Cognizant
+Job Id: 77R32s3AecKd6sYuEks5YR
+User: drisshya.sunil@gmail.com
+> OIE_004 INFO 2025-04-04T03:46:44.752Z Successfully exported object [/Explore/Default] of type [Project] id [7hxgVlGvJsUhpVntKYWh6A]
+> OIE_004 INFO 2025-04-04T03:46:44.752Z Successfully exported object [/SYS/_SYSTEM_PROJECT] of type [Project] id [8D3ALXkXljAbns6COmpaIU]
+> OIE_004 INFO 2025-04-04T03:46:44.779Z Successfully exported object [/SYS/_SYSTEM_FOLDER] of type [Folder] id [bWzkX21UQ2Cc5kQBcW7MmO]
+> OIE_004 INFO 2025-04-04T03:46:44.866Z Successfully exported object [/SYS/3289f249da3e523] of type [AgentGroup] id [81GTFiSOiEogGyckx2q5Gu]
+> OIE_004 INFO 2025-04-04T03:46:44.998Z Successfully exported object [/SYS/Drisshya_IICS_src] of type [Connection] id [aQPRcM2LwM5d1nUTaY1cAB]
+> OIE_004 INFO 2025-04-04T03:46:44.998Z Successfully exported object [/SYS/ex_1_salesforce] of type [Connection] id [aWFiZx59vp9fVDhJi4E34A]
+> OIE_004 INFO 2025-04-04T03:46:45.134Z Successfully exported object [/Explore/Default/Ex1_Replication] of type [DRS] id [7D3B5wyld0vb6GN0sx0IQN]
+> OIE_003 INFO 2025-04-04T03:46:45.134Z Finished export operation.
+Job Name: Ex1_Replication-1743738931762
+Start Time: 04/04/25 3:46 AM
+End Time: 04/04/25 3:46 AM
+Started by: drisshya.sunil@gmail.com
+Start Method: UI
+Source Organization: Cognizant
+Status: SUCCESSFUL

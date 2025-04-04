@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE POWERMART SYSTEM "powrmart.dtd">
+<POWERMART CREATION_DATE="04/03/2025 23:40:59" REPOSITORY_VERSION="162.73">
+    <REPOSITORY CODEPAGE="MS1252" DATABASETYPE="Flat File" NAME="IICSRepo" VERSION="162">
+        <FOLDER DESCRIPTION="Folder for SFDC objects" GROUP="Administrators" NAME="SFDC_Folder" OWNER="Administrator" PERMISSIONS="rwxrw-r--" SHARED="NOTSHARED" UUID="f1496797-18f8-4c0d-a6da-74409f2b0fe4">
+            <SOURCE BUSINESSNAME="Exercise_1_src.csv" DATABASETYPE="Flat File" DBDNAME="SrcConn_012X1W0B000000000002" DESCRIPTION="" NAME="Exercise_1_src_csv" OBJECTVERSION="1" OWNERNAME="APIUSER" VERSIONNUMBER="1">
+                <FLATFILE CODEPAGE="UTF-8" CONSECDELIMITERSASONE="NO" DELIMITED="YES" DELIMITERS="\011" ESCAPE_CHARACTER="" KEEPESCAPECHAR="NO" LINESEQUENTIAL="NO" NULLCHARTYPE="ASCII" NULL_CHARACTER="*" PADBYTES="1" QUOTE_CHARACTER="NONE" REPEATABLE="NO" ROWDELIMITER="0" SHIFTSENSITIVEDATA="NO" SKIPROWS="1" STRIPTRAILINGBLANKS="NO"/>
+                <TABLEATTRIBUTE NAME="Base Table Name" VALUE=""/>
+                <TABLEATTRIBUTE NAME="Search Specification" VALUE=""/>
+                <TABLEATTRIBUTE NAME="Sort Specification" VALUE=""/>
+                <TABLEATTRIBUTE NAME="Datetime Format" VALUE="A  19 mm/dd/yyyy hh24:mi:ss"/>
+                <TABLEATTRIBUTE NAME="Decimal Separator" VALUE="."/>
+                <TABLEATTRIBUTE NAME="Thousand Separator" VALUE="None"/>
+                <TABLEATTRIBUTE NAME="Add Currently Processed Flat File Name Port" VALUE="NO"/>
+                <SOURCEFIELD BUSINESSNAME="Name" DATATYPE="nstring" DESCRIPTION="" FIELDNUMBER="1" FIELDPROPERTY="0" FIELDTYPE="ELEMITEM" HIDDEN="NO" KEYTYPE="NOT A KEY" LENGTH="255" LEVEL="0" NAME="Name" NULLABLE="NULL" OCCURS="0" OFFSET="0" PHYSICALLENGTH="255" PHYSICALOFFSET="0" PICTURETEXT="" PRECISION="255" SCALE="0" USAGE_FLAGS=""/>
+                <SOURCEFIELD BUSINESSNAME="AreaCode" DATATYPE="nstring" DESCRIPTION="" FIELDNUMBER="2" FIELDPROPERTY="0" FIELDTYPE="ELEMITEM" HIDDEN="NO" KEYTYPE="NOT A KEY" LENGTH="255" LEVEL="0" NAME="AreaCode" NULLABLE="NULL" OCCURS="0" OFFSET="0" PHYSICALLENGTH="255" PHYSICALOFFSET="0" PICTURETEXT="" PRECISION="255" SCALE="0" USAGE_FLAGS=""/>
+                <SOURCEFIELD BUSINESSNAME="PhoneNumber" DATATYPE="nstring" DESCRIPTION="" FIELDNUMBER="3" FIELDPROPERTY="0" FIELDTYPE="ELEMITEM" HIDDEN="NO" KEYTYPE="NOT A KEY" LENGTH="255" LEVEL="0" NAME="PhoneNumber" NULLABLE="NULL" OCCURS="0" OFFSET="0" PHYSICALLENGTH="255" PHYSICALOFFSET="0" PICTURETEXT="" PRECISION="255" SCALE="0" USAGE_FLAGS=""/>
+                <SOURCEFIELD BUSINESSNAME="Street" DATATYPE="nstring" DESCRIPTION="" FIELDNUMBER="4" FIELDPROPERTY="0" FIELDTYPE="ELEMITEM" HIDDEN="NO" KEYTYPE="NOT A KEY" LENGTH="255" LEVEL="0" NAME="Street" NULLABLE="NULL" OCCURS="0" OFFSET="0" PHYSICALLENGTH="255" PHYSICALOFFSET="0" PICTURETEXT="" PRECISION="255" SCALE="0" USAGE_FLAGS=""/>
+                <SOURCEFIELD BUSINESSNAME="City" DATATYPE="nstring" DESCRIPTION="" FIELDNUMBER="5" FIELDPROPERTY="0" FIELDTYPE="ELEMITEM" HIDDEN="NO" KEYTYPE="NOT A KEY" LENGTH="40" LEVEL="0" NAME="City" NULLABLE="NULL" OCCURS="0" OFFSET="0" PHYSICALLENGTH="40" PHYSICALOFFSET="0" PICTURETEXT="" PRECISION="40" SCALE="0" USAGE_FLAGS=""/>
+                <SOURCEFIELD BUSINESSNAME="State" DATATYPE="nstring" DESCRIPTION="" FIELDNUMBER="6" FIELDPROPERTY="0" FIELDTYPE="ELEMITEM" HIDDEN="NO" KEYTYPE="NOT A KEY" LENGTH="80" LEVEL="0" NAME="State" NULLABLE="NULL" OCCURS="0" OFFSET="0" PHYSICALLENGTH="80" PHYSICALOFFSET="0" PICTURETEXT="" PRECISION="80" SCALE="0" USAGE_FLAGS=""/>
+                <SOURCEFIELD BUSINESSNAME="PostalCode" DATATYPE="nstring" DESCRIPTION="" FIELDNUMBER="7" FIELDPROPERTY="0" FIELDTYPE="ELEMITEM" HIDDEN="NO" KEYTYPE="NOT A KEY" LENGTH="20" LEVEL="0" NAME="PostalCode" NULLABLE="NULL" OCCURS="0" OFFSET="0" PHYSICALLENGTH="20" PHYSICALOFFSET="0" PICTURETEXT="" PRECISION="20" SCALE="0" USAGE_FLAGS=""/>
+                <SOURCEFIELD BUSINESSNAME="Country" DATATYPE="nstring" DESCRIPTION="" FIELDNUMBER="8" FIELDPROPERTY="0" FIELDTYPE="ELEMITEM" HIDDEN="NO" KEYTYPE="NOT A KEY" LENGTH="80" LEVEL="0" NAME="Country" NULLABLE="NULL" OCCURS="0" OFFSET="0" PHYSICALLENGTH="80" PHYSICALOFFSET="0" PICTURETEXT="" PRECISION="80" SCALE="0" USAGE_FLAGS=""/>
+                <SOURCEFIELD BUSINESSNAME="Customer_Type" DATATYPE="nstring" DESCRIPTION="" FIELDNUMBER="9" FIELDPROPERTY="0" FIELDTYPE="ELEMITEM" HIDDEN="NO" KEYTYPE="NOT A KEY" LENGTH="255" LEVEL="0" NAME="Customer_Type" NULLABLE="NULL" OCCURS="0" OFFSET="0" PHYSICALLENGTH="255" PHYSICALOFFSET="0" PICTURETEXT="" PRECISION="255" SCALE="0" USAGE_FLAGS=""/>
+            </SOURCE>
+            <TARGET BUSINESSNAME="Account" CONSTRAINT="" DATABASETYPE="SalesForce_New" DESCRIPTION="SFDC target" NAME="Account" OBJECTVERSION="1" TABLEOPTIONS="" VERSIONNUMBER="1">
+                <TARGETFIELD BUSINESSNAME="Account Name" DATATYPE="string" DESCRIPTION="" FIELDNUMBER="1" KEYTYPE="NOT A KEY" NAME="Name" NULLABLE="NOTNULL" PICTURETEXT="" PRECISION="255" SCALE="0">
+                    <FIELDATTRIBUTE NAME="Createable" VALUE="1"/>
+                    <FIELDATTRIBUTE NAME="SforceName" VALUE="Name"/>
+                    <FIELDATTRIBUTE NAME="Reference To" VALUE=""/>
+                    <FIELDATTRIBUTE NAME="Updateable" VALUE="1"/>
+                    <FIELDATTRIBUTE NAME="IDLookUp" VALUE="0"/>
+                    <FIELDATTRIBUTE NAME="External ID" VALUE="0"/>
+                </TARGETFIELD>
+                <TARGETFIELD BUSINESSNAME="Account Type" DATATYPE="picklist" DESCRIPTION="" FIELDNUMBER="2" KEYTYPE="NOT A KEY" NAME="Type" NULLABLE="NULL" PICTURETEXT="" PRECISION="255" SCALE="0">
+                    <FIELDATTRIBUTE NAME="Createable" VALUE="1"/>
+                    <FIELDATTRIBUTE NAME="SforceName" VALUE="Type"/>
+                    <FIELDATTRIBUTE NAME="Reference To" VALUE=""/>
+                    <FIELDATTRIBUTE NAME="Updateable" VALUE="1"/>
+                    <FIELDATTRIBUTE NAME="IDLookUp" VALUE="0"/>
+                    <FIELDATTRIBUTE NAME="External ID" VALUE="0"/>
+                </TARGETFIELD>
+                <TARGETFIELD BUSINESSNAME="Billing Street" DATATYPE="textarea" DESCRIPTION="" FIELDNUMBER="3" KEYTYPE="NOT A KEY" NAME="BillingStreet" NULLABLE="NULL" PICTURETEXT="" PRECISION="255" SCALE="0">
+                    <FIELDATTRIBUTE NAME="Createable" VALUE="1"/>
+                    <FIELDATTRIBUTE NAME="SforceName" VALUE="BillingStreet"/>
+                    <FIELDATTRIBUTE NAME="Reference To" VALUE=""/>
+                    <FIELDATTRIBUTE NAME="Updateable" VALUE="1"/>
+                    <FIELDATTRIBUTE NAME="IDLookUp" VALUE="0"/>
+                    <FIELDATTRIBUTE NAME="External ID" VALUE="0"/>
+                </TARGETFIELD>
+                <TARGETFIELD BUSINESSNAME="Billing City" DATATYPE="string" DESCRIPTION="" FIELDNUMBER="4" KEYTYPE="NOT A KEY" NAME="BillingCity" NULLABLE="NULL" PICTURETEXT="" PRECISION="40" SCALE="0">
+                    <FIELDATTRIBUTE NAME="Createable" VALUE="1"/>
+                    <FIELDATTRIBUTE NAME="SforceName" VALUE="BillingCity"/>
+                    <FIELDATTRIBUTE NAME="Reference To" VALUE=""/>
+                    <FIELDATTRIBUTE NAME="Updateable" VALUE="1"/>
+                    <FIELDATTRIBUTE NAME="IDLookUp" VALUE="0"/>
+                    <FIELDATTRIBUTE NAME="External ID" VALUE="0"/>
+                </TARGETFIELD>
+                <TARGETFIELD BUSINESSNAME="Billing State/Province" DATATYPE="string" DESCRIPTION="" FIELDNUMBER="5" KEYTYPE="NOT A KEY" NAME="BillingState" NULLABLE="NULL" PICTURETEXT="" PRECISION="80" SCALE="0">
+                    <FIELDATTRIBUTE NAME="Createable" VALUE="1"/>
+                    <FIELDATTRIBUTE NAME="SforceName" VALUE="BillingState"/>
+                    <FIELDATTRIBUTE NAME="Reference To" VALUE=""/>
+                    <FIELDATTRIBUTE NAME="Updateable" VALUE="1"/>
+                    <FIELDATTRIBUTE NAME="IDLookUp" VALUE="0"/>
+                    <FIELDATTRIBUTE NAME="External ID" VALUE="0"/>
+                </TARGETFIELD>
+                <TARGETFIELD BUSINESSNAME="Billing Zip/Postal Code" DATATYPE="string" DESCRIPTION="" FIELDNUMBER="6" KEYTYPE="NOT A KEY" NAME="BillingPostalCode" NULLABLE="NULL" PICTURETEXT="" PRECISION="20" SCALE="0">
+                    <FIELDATTRIBUTE NAME="Createable" VALUE="1"/>
+                    <FIELDATTRIBUTE NAME="SforceName" VALUE="BillingPostalCode"/>
+                    <FIELDATTRIBUTE NAME="Reference To" VALUE=""/>
+                    <FIELDATTRIBUTE NAME="Updateable" VALUE="1"/>
+                    <FIELDATTRIBUTE NAME="IDLookUp" VALUE="0"/>
+                    <FIELDATTRIBUTE NAME="External ID" VALUE="0"/>
+                </TARGETFIELD>
+                <TARGETFIELD BUSINESSNAME="Billing Country" DATATYPE="string" DESCRIPTION="" FIELDNUMBER="7" KEYTYPE="NOT A KEY" NAME="BillingCountry" NULLABLE="NULL" PICTURETEXT="" PRECISION="80" SCALE="0">
+                    <FIELDATTRIBUTE NAME="Createable" VALUE="1"/>
+                    <FIELDATTRIBUTE NAME="SforceName" VALUE="BillingCountry"/>
+                    <FIELDATTRIBUTE NAME="Reference To" VALUE=""/>
+                    <FIELDATTRIBUTE NAME="Updateable" VALUE="1"/>
+                    <FIELDATTRIBUTE NAME="IDLookUp" VALUE="0"/>
+                    <FIELDATTRIBUTE NAME="External ID" VALUE="0"/>
+                </TARGETFIELD>
+                <TARGETFIELD BUSINESSNAME="Account Phone" DATATYPE="phone" DESCRIPTION="" FIELDNUMBER="8" KEYTYPE="NOT A KEY" NAME="Phone" NULLABLE="NULL" PICTURETEXT="" PRECISION="40" SCALE="0">
+                    <FIELDATTRIBUTE NAME="Createable" VALUE="1"/>
+                    <FIELDATTRIBUTE NAME="SforceName" VALUE="Phone"/>
+                    <FIELDATTRIBUTE NAME="Reference To" VALUE=""/>
+                    <FIELDATTRIBUTE NAME="Updateable" VALUE="1"/>
+                    <FIELDATTRIBUTE NAME="IDLookUp" VALUE="0"/>
+                    <FIELDATTRIBUTE NAME="External ID" VALUE="0"/>
+                </TARGETFIELD>
+                <METADATAEXTENSION DATATYPE="STRING" DESCRIPTION="Name of the Salesforce.com object" DOMAINNAME="SalesForce_New" ISCLIENTEDITABLE="NO" ISCLIENTVISIBLE="YES" ISREUSABLE="YES" ISSHAREREAD="NO" ISSHAREWRITE="NO" MAXLENGTH="256" NAME="Object Type" VALUE="Account" VENDORNAME="INFORMATICA"/>
+            </TARGET>
+            <MAPPING DESCRIPTION="IOD Integration mapping" ISVALID="YES" NAME="m_dss_012X1W0I000000000002" OBJECTVERSION="1" VERSIONNUMBER="1">
+                <TRANSFORMATION DESCRIPTION="" NAME="SQ_Exercise_1_src_csv" OBJECTVERSION="1" REUSABLE="NO" TYPE="Source Qualifier" VERSIONNUMBER="1">
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="Name" EXPRESSIONTYPE="GENERAL" NAME="Name" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="255" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="City" EXPRESSIONTYPE="GENERAL" NAME="City" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="40" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="Country" EXPRESSIONTYPE="GENERAL" NAME="Country" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="80" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="AreaCode" EXPRESSIONTYPE="GENERAL" NAME="AreaCode" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="255" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="State" EXPRESSIONTYPE="GENERAL" NAME="State" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="80" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="Customer_Type" EXPRESSIONTYPE="GENERAL" NAME="Customer_Type" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="255" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="Street" EXPRESSIONTYPE="GENERAL" NAME="Street" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="255" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="PostalCode" EXPRESSIONTYPE="GENERAL" NAME="PostalCode" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="20" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="PhoneNumber" EXPRESSIONTYPE="GENERAL" NAME="PhoneNumber" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="255" SCALE="0"/>
+                    <TABLEATTRIBUTE NAME="Output is deterministic" VALUE="NO"/>
+                    <TABLEATTRIBUTE NAME="User Defined Join" VALUE=""/>
+                    <TABLEATTRIBUTE NAME="Select Distinct" VALUE="NO"/>
+                    <TABLEATTRIBUTE NAME="Post SQL" VALUE=""/>
+                    <TABLEATTRIBUTE NAME="Sql Query" VALUE=""/>
+                    <TABLEATTRIBUTE NAME="Number Of Sorted Ports" VALUE="0"/>
+                    <TABLEATTRIBUTE NAME="Is Partitionable" VALUE="NO"/>
+                    <TABLEATTRIBUTE NAME="Source Filter" VALUE=""/>
+                    <TABLEATTRIBUTE NAME="Output is repeatable" VALUE="Never"/>
+                    <TABLEATTRIBUTE NAME="Tracing Level" VALUE="Normal"/>
+                    <TABLEATTRIBUTE NAME="Pre SQL" VALUE=""/>
+                </TRANSFORMATION>
+                <TRANSFORMATION DESCRIPTION="" NAME="Expr_DSS_012X1W0I000000000002_1" OBJECTVERSION="1" REUSABLE="NO" TYPE="Expression" VERSIONNUMBER="1">
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="Name" EXPRESSIONTYPE="GENERAL" NAME="Name" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="255" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="City" EXPRESSIONTYPE="GENERAL" NAME="City" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="40" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="Country" EXPRESSIONTYPE="GENERAL" NAME="Country" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="80" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="AreaCode" EXPRESSIONTYPE="GENERAL" NAME="AreaCode" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="255" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="State" EXPRESSIONTYPE="GENERAL" NAME="State" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="80" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="Customer_Type" EXPRESSIONTYPE="GENERAL" NAME="Customer_Type" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="255" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="Street" EXPRESSIONTYPE="GENERAL" NAME="Street" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="255" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="PostalCode" EXPRESSIONTYPE="GENERAL" NAME="PostalCode" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="20" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="nstring" DEFAULTVALUE="" DESCRIPTION="" EXPRESSION="PhoneNumber" EXPRESSIONTYPE="GENERAL" NAME="PhoneNumber" PICTURETEXT="" PORTTYPE="INPUT/OUTPUT" PRECISION="255" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="string" DEFAULTVALUE="ERROR('transformation')" DESCRIPTION="" EXPRESSION="Name" EXPRESSIONTYPE="GENERAL" NAME="Name_OUT" PICTURETEXT="" PORTTYPE="OUTPUT" PRECISION="255" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="string" DEFAULTVALUE="ERROR('transformation')" DESCRIPTION="" EXPRESSION="Customer_Type" EXPRESSIONTYPE="GENERAL" NAME="Type_OUT" PICTURETEXT="" PORTTYPE="OUTPUT" PRECISION="255" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="string" DEFAULTVALUE="ERROR('transformation')" DESCRIPTION="" EXPRESSION="Street" EXPRESSIONTYPE="GENERAL" NAME="BillingStreet_OUT" PICTURETEXT="" PORTTYPE="OUTPUT" PRECISION="255" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="string" DEFAULTVALUE="ERROR('transformation')" DESCRIPTION="" EXPRESSION="City" EXPRESSIONTYPE="GENERAL" NAME="BillingCity_OUT" PICTURETEXT="" PORTTYPE="OUTPUT" PRECISION="40" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="string" DEFAULTVALUE="ERROR('transformation')" DESCRIPTION="" EXPRESSION="State" EXPRESSIONTYPE="GENERAL" NAME="BillingState_OUT" PICTURETEXT="" PORTTYPE="OUTPUT" PRECISION="80" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="string" DEFAULTVALUE="ERROR('transformation')" DESCRIPTION="" EXPRESSION="PostalCode" EXPRESSIONTYPE="GENERAL" NAME="BillingPostalCode_OUT" PICTURETEXT="" PORTTYPE="OUTPUT" PRECISION="20" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="string" DEFAULTVALUE="ERROR('transformation')" DESCRIPTION="" EXPRESSION="Country" EXPRESSIONTYPE="GENERAL" NAME="BillingCountry_OUT" PICTURETEXT="" PORTTYPE="OUTPUT" PRECISION="80" SCALE="0"/>
+                    <TRANSFORMFIELD DATATYPE="string" DEFAULTVALUE="ERROR('transformation')" DESCRIPTION="" EXPRESSION="concat(AreaCode, PhoneNumber)" EXPRESSIONTYPE="GENERAL" NAME="Phone_OUT" PICTURETEXT="" PORTTYPE="OUTPUT" PRECISION="40" SCALE="0"/>
+                    <TABLEATTRIBUTE NAME="Tracing Level" VALUE="Normal"/>
+                </TRANSFORMATION>
+                <INSTANCE DBDNAME="SrcConn_012X1W0B000000000002" DESCRIPTION="" NAME="Exercise_1_src_csv" TRANSFORMATION_NAME="Exercise_1_src_csv" TRANSFORMATION_TYPE="Source Definition" TYPE="SOURCE"/>
+                <INSTANCE DESCRIPTION="SFDC target" NAME="Account" TRANSFORMATION_NAME="Account" TRANSFORMATION_TYPE="Target Definition" TYPE="TARGET"/>
+                <INSTANCE DESCRIPTION="" NAME="SQ_Exercise_1_src_csv" REUSABLE="NO" TRANSFORMATION_NAME="SQ_Exercise_1_src_csv" TRANSFORMATION_TYPE="Source Qualifier" TYPE="TRANSFORMATION">
+                    <ASSOCIATED_SOURCE_INSTANCE NAME="Exercise_1_src_csv"/>
+                </INSTANCE>
+                <INSTANCE DESCRIPTION="" NAME="Expr_DSS_012X1W0I000000000002_1" REUSABLE="NO" TRANSFORMATION_NAME="Expr_DSS_012X1W0I000000000002_1" TRANSFORMATION_TYPE="Expression" TYPE="TRANSFORMATION"/>
+                <CONNECTOR FROMFIELD="Name" FROMINSTANCE="Exercise_1_src_csv" FROMINSTANCETYPE="Source Definition" TOFIELD="Name" TOINSTANCE="SQ_Exercise_1_src_csv" TOINSTANCETYPE="Source Qualifier"/>
+                <CONNECTOR FROMFIELD="City" FROMINSTANCE="Exercise_1_src_csv" FROMINSTANCETYPE="Source Definition" TOFIELD="City" TOINSTANCE="SQ_Exercise_1_src_csv" TOINSTANCETYPE="Source Qualifier"/>
+                <CONNECTOR FROMFIELD="Country" FROMINSTANCE="Exercise_1_src_csv" FROMINSTANCETYPE="Source Definition" TOFIELD="Country" TOINSTANCE="SQ_Exercise_1_src_csv" TOINSTANCETYPE="Source Qualifier"/>
+                <CONNECTOR FROMFIELD="AreaCode" FROMINSTANCE="Exercise_1_src_csv" FROMINSTANCETYPE="Source Definition" TOFIELD="AreaCode" TOINSTANCE="SQ_Exercise_1_src_csv" TOINSTANCETYPE="Source Qualifier"/>
+                <CONNECTOR FROMFIELD="State" FROMINSTANCE="Exercise_1_src_csv" FROMINSTANCETYPE="Source Definition" TOFIELD="State" TOINSTANCE="SQ_Exercise_1_src_csv" TOINSTANCETYPE="Source Qualifier"/>
+                <CONNECTOR FROMFIELD="Customer_Type" FROMINSTANCE="Exercise_1_src_csv" FROMINSTANCETYPE="Source Definition" TOFIELD="Customer_Type" TOINSTANCE="SQ_Exercise_1_src_csv" TOINSTANCETYPE="Source Qualifier"/>
+                <CONNECTOR FROMFIELD="Street" FROMINSTANCE="Exercise_1_src_csv" FROMINSTANCETYPE="Source Definition" TOFIELD="Street" TOINSTANCE="SQ_Exercise_1_src_csv" TOINSTANCETYPE="Source Qualifier"/>
+                <CONNECTOR FROMFIELD="PostalCode" FROMINSTANCE="Exercise_1_src_csv" FROMINSTANCETYPE="Source Definition" TOFIELD="PostalCode" TOINSTANCE="SQ_Exercise_1_src_csv" TOINSTANCETYPE="Source Qualifier"/>
+                <CONNECTOR FROMFIELD="PhoneNumber" FROMINSTANCE="Exercise_1_src_csv" FROMINSTANCETYPE="Source Definition" TOFIELD="PhoneNumber" TOINSTANCE="SQ_Exercise_1_src_csv" TOINSTANCETYPE="Source Qualifier"/>
+                <CONNECTOR FROMFIELD="Name" FROMINSTANCE="SQ_Exercise_1_src_csv" FROMINSTANCETYPE="Source Qualifier" TOFIELD="Name" TOINSTANCE="Expr_DSS_012X1W0I000000000002_1" TOINSTANCETYPE="Expression"/>
+                <CONNECTOR FROMFIELD="City" FROMINSTANCE="SQ_Exercise_1_src_csv" FROMINSTANCETYPE="Source Qualifier" TOFIELD="City" TOINSTANCE="Expr_DSS_012X1W0I000000000002_1" TOINSTANCETYPE="Expression"/>
+                <CONNECTOR FROMFIELD="Country" FROMINSTANCE="SQ_Exercise_1_src_csv" FROMINSTANCETYPE="Source Qualifier" TOFIELD="Country" TOINSTANCE="Expr_DSS_012X1W0I000000000002_1" TOINSTANCETYPE="Expression"/>
+                <CONNECTOR FROMFIELD="AreaCode" FROMINSTANCE="SQ_Exercise_1_src_csv" FROMINSTANCETYPE="Source Qualifier" TOFIELD="AreaCode" TOINSTANCE="Expr_DSS_012X1W0I000000000002_1" TOINSTANCETYPE="Expression"/>
+                <CONNECTOR FROMFIELD="State" FROMINSTANCE="SQ_Exercise_1_src_csv" FROMINSTANCETYPE="Source Qualifier" TOFIELD="State" TOINSTANCE="Expr_DSS_012X1W0I000000000002_1" TOINSTANCETYPE="Expression"/>
+                <CONNECTOR FROMFIELD="Customer_Type" FROMINSTANCE="SQ_Exercise_1_src_csv" FROMINSTANCETYPE="Source Qualifier" TOFIELD="Customer_Type" TOINSTANCE="Expr_DSS_012X1W0I000000000002_1" TOINSTANCETYPE="Expression"/>
+                <CONNECTOR FROMFIELD="Street" FROMINSTANCE="SQ_Exercise_1_src_csv" FROMINSTANCETYPE="Source Qualifier" TOFIELD="Street" TOINSTANCE="Expr_DSS_012X1W0I000000000002_1" TOINSTANCETYPE="Expression"/>
+                <CONNECTOR FROMFIELD="PostalCode" FROMINSTANCE="SQ_Exercise_1_src_csv" FROMINSTANCETYPE="Source Qualifier" TOFIELD="PostalCode" TOINSTANCE="Expr_DSS_012X1W0I000000000002_1" TOINSTANCETYPE="Expression"/>
+                <CONNECTOR FROMFIELD="PhoneNumber" FROMINSTANCE="SQ_Exercise_1_src_csv" FROMINSTANCETYPE="Source Qualifier" TOFIELD="PhoneNumber" TOINSTANCE="Expr_DSS_012X1W0I000000000002_1" TOINSTANCETYPE="Expression"/>
+                <CONNECTOR FROMFIELD="BillingStreet_OUT" FROMINSTANCE="Expr_DSS_012X1W0I000000000002_1" FROMINSTANCETYPE="Expression" TOFIELD="BillingStreet" TOINSTANCE="Account" TOINSTANCETYPE="Target Definition"/>
+                <CONNECTOR FROMFIELD="BillingPostalCode_OUT" FROMINSTANCE="Expr_DSS_012X1W0I000000000002_1" FROMINSTANCETYPE="Expression" TOFIELD="BillingPostalCode" TOINSTANCE="Account" TOINSTANCETYPE="Target Definition"/>
+                <CONNECTOR FROMFIELD="Type_OUT" FROMINSTANCE="Expr_DSS_012X1W0I000000000002_1" FROMINSTANCETYPE="Expression" TOFIELD="Type" TOINSTANCE="Account" TOINSTANCETYPE="Target Definition"/>
+                <CONNECTOR FROMFIELD="BillingCountry_OUT" FROMINSTANCE="Expr_DSS_012X1W0I000000000002_1" FROMINSTANCETYPE="Expression" TOFIELD="BillingCountry" TOINSTANCE="Account" TOINSTANCETYPE="Target Definition"/>
+                <CONNECTOR FROMFIELD="BillingState_OUT" FROMINSTANCE="Expr_DSS_012X1W0I000000000002_1" FROMINSTANCETYPE="Expression" TOFIELD="BillingState" TOINSTANCE="Account" TOINSTANCETYPE="Target Definition"/>
+                <CONNECTOR FROMFIELD="Phone_OUT" FROMINSTANCE="Expr_DSS_012X1W0I000000000002_1" FROMINSTANCETYPE="Expression" TOFIELD="Phone" TOINSTANCE="Account" TOINSTANCETYPE="Target Definition"/>
+                <CONNECTOR FROMFIELD="Name_OUT" FROMINSTANCE="Expr_DSS_012X1W0I000000000002_1" FROMINSTANCETYPE="Expression" TOFIELD="Name" TOINSTANCE="Account" TOINSTANCETYPE="Target Definition"/>
+                <CONNECTOR FROMFIELD="BillingCity_OUT" FROMINSTANCE="Expr_DSS_012X1W0I000000000002_1" FROMINSTANCETYPE="Expression" TOFIELD="BillingCity" TOINSTANCE="Account" TOINSTANCETYPE="Target Definition"/>
+                <TARGETLOADORDER ORDER="1" TARGETINSTANCE="Account"/>
+            </MAPPING>
+            <CONFIG DESCRIPTION="Default session configuration object" ISDEFAULT="YES" NAME="cfg_s_dss_012X1W0I000000000002" VERSIONNUMBER="1">
+                <ATTRIBUTE NAME="Log Options" VALUE="0"/>
+                <ATTRIBUTE NAME="Custom Properties" VALUE=""/>
+                <ATTRIBUTE NAME="DateTime Format String" VALUE="MM/DD/YYYY HH24:MI:SS.US"/>
+                <ATTRIBUTE NAME="Cache LOOKUP() function" VALUE="YES"/>
+                <ATTRIBUTE NAME="Session on Grid" VALUE=""/>
+                <ATTRIBUTE NAME="Maximum Partial Session Log Files" VALUE="1"/>
+                <ATTRIBUTE NAME="Writer Commit Statistics Log Frequency" VALUE="1"/>
+                <ATTRIBUTE NAME="Pre 85 Timestamp Compatibility" VALUE="NO"/>
+                <ATTRIBUTE NAME="Session Log File Max Time Period" VALUE="0"/>
+                <ATTRIBUTE NAME="Save session log by" VALUE="Session Runs"/>
+                <ATTRIBUTE NAME="Override tracing" VALUE="None"/>
+                <ATTRIBUTE NAME="Advanced" VALUE=""/>
+                <ATTRIBUTE NAME="Dynamic Partitioning" VALUE="Disabled"/>
+                <ATTRIBUTE NAME="Error handling" VALUE=""/>
+                <ATTRIBUTE NAME="Number of Partitions" VALUE="1"/>
+                <ATTRIBUTE NAME="Error Log DB Connection" VALUE=""/>
+                <ATTRIBUTE NAME="Partitioning Options" VALUE=""/>
+                <ATTRIBUTE NAME="Writer Commit Statistics Log Interval" VALUE="0"/>
+                <ATTRIBUTE NAME="Error Log Table Name Prefix" VALUE=""/>
+                <ATTRIBUTE NAME="Error Log File Directory" VALUE="$PMBadFileDir\"/>
+                <ATTRIBUTE NAME="On Pre-session command task error" VALUE="Stop"/>
+                <ATTRIBUTE NAME="On Pre-Post SQL error" VALUE="Stop"/>
+                <ATTRIBUTE NAME="Log Source Row Data" VALUE="NO"/>
+                <ATTRIBUTE NAME="Log Row Data" VALUE="YES"/>
+                <ATTRIBUTE NAME="Pre-build lookup cache" VALUE="Auto"/>
+                <ATTRIBUTE NAME="Default buffer block size" VALUE="Auto"/>
+                <ATTRIBUTE NAME="Stop on errors" VALUE="0"/>
+                <ATTRIBUTE NAME="Maximum Memory Allowed For Auto Memory Attributes" VALUE="512MB"/>
+                <ATTRIBUTE NAME="Line Sequential buffer length" VALUE="1024"/>
+                <ATTRIBUTE NAME="Is Enabled" VALUE="NO"/>
+                <ATTRIBUTE NAME="Data Column Delimiter" VALUE="|"/>
+                <ATTRIBUTE NAME="Save session log for these runs" VALUE="0"/>
+                <ATTRIBUTE NAME="Session Log File Max Size" VALUE="0"/>
+                <ATTRIBUTE NAME="Error Log File Name" VALUE="PMError.log"/>
+                <ATTRIBUTE NAME="On Stored Procedure error" VALUE="Stop"/>
+                <ATTRIBUTE NAME="Error Log Type" VALUE="None"/>
+                <ATTRIBUTE NAME="Maximum Percentage of Total Memory Allowed For Auto Memory Attributes" VALUE="5"/>
+                <ATTRIBUTE NAME="Constraint based load ordering" VALUE="NO"/>
+                <ATTRIBUTE NAME="Additional Concurrent Pipelines for Lookup Cache Creation" VALUE="Auto"/>
+            </CONFIG>
+            <WORKFLOW DESCRIPTION="IOD DSS workflow" ISENABLED="YES" ISRUNNABLESERVICE="NO" ISSERVICE="NO" ISVALID="YES" NAME="wf_dss_012X1W0I000000000002" REUSABLE_SCHEDULER="NO" SCHEDULERNAME="Scheduler" SUSPEND_ON_ERROR="NO" TASKS_MUST_RUN_ON_SERVER="NO" VERSIONNUMBER="1">
+                <SCHEDULER DESCRIPTION="" NAME="Scheduler" REUSABLE="NO" VERSIONNUMBER="1">
+                    <SCHEDULEINFO SCHEDULETYPE="ONDEMAND"/>
+                </SCHEDULER>
+                <TASK DESCRIPTION="Start Description" NAME="Start" REUSABLE="NO" TYPE="Start" VERSIONNUMBER="1"/>
+                <SESSION DESCRIPTION="IOD Integration session" ISVALID="YES" MAPPINGNAME="m_dss_012X1W0I000000000002" NAME="s_dss_012X1W0I000000000002" REUSABLE="NO" SORTORDER="Binary" VERSIONNUMBER="1">
+                    <SESSTRANSFORMATIONINST ISREPARTITIONPOINT="YES" PARTITIONTYPE="PASS THROUGH" PIPELINE="1" SINSTANCENAME="Account" STAGE="1" TRANSFORMATIONNAME="Account" TRANSFORMATIONTYPE="Target Definition"/>
+                    <SESSTRANSFORMATIONINST ISREPARTITIONPOINT="YES" PARTITIONTYPE="PASS THROUGH" PIPELINE="1" SINSTANCENAME="SQ_Exercise_1_src_csv" STAGE="2" TRANSFORMATIONNAME="SQ_Exercise_1_src_csv" TRANSFORMATIONTYPE="Source Qualifier"/>
+                    <SESSTRANSFORMATIONINST ISREPARTITIONPOINT="NO" PIPELINE="1" SINSTANCENAME="Exercise_1_src_csv" STAGE="1" TRANSFORMATIONNAME="Exercise_1_src_csv" TRANSFORMATIONTYPE="Source Definition">
+                        <FLATFILE CODEPAGE="UTF-8" CONSECDELIMITERSASONE="NO" DELIMITED="YES" DELIMITERS="\011" ESCAPE_CHARACTER="" KEEPESCAPECHAR="NO" LINESEQUENTIAL="NO" MULTIDELIMITERSASAND="YES" NULLCHARTYPE="ASCII" NULL_CHARACTER="*" PADBYTES="1" QUOTE_CHARACTER="NONE" REPEATABLE="NO" ROWDELIMITER="0" SKIPROWS="1" STRIPTRAILINGBLANKS="NO"/>
+                    </SESSTRANSFORMATIONINST>
+                    <SESSTRANSFORMATIONINST ISREPARTITIONPOINT="NO" PIPELINE="1" SINSTANCENAME="Expr_DSS_012X1W0I000000000002_1" STAGE="2" TRANSFORMATIONNAME="Expr_DSS_012X1W0I000000000002_1" TRANSFORMATIONTYPE="Expression"/>
+                    <CONFIGREFERENCE REFOBJECTNAME="cfg_s_dss_012X1W0I000000000002" TYPE="Session config">
+                        <ATTRIBUTE NAME="Error Log Type" VALUE="Flat File"/>
+                        <ATTRIBUTE NAME="Log Source Row Data" VALUE="YES"/>
+                        <ATTRIBUTE NAME="Error Log File Name" VALUE="s_dss_012X1W0I000000000002_$$runId$$_error.csv"/>
+                        <ATTRIBUTE NAME="DateTime Format String" VALUE="MM/DD/YYYY HH24:MI:SS"/>
+                        <ATTRIBUTE NAME="Data Column Delimiter" VALUE=","/>
+                    </CONFIGREFERENCE>
+                    <SESSIONEXTENSION NAME="SalesForce Writer_New" SINSTANCENAME="Account" SUBTYPE="SalesForce Writer_New" TRANSFORMATIONTYPE="Target Definition" TYPE="WRITER">
+                        <CONNECTIONREFERENCE CNXREFNAME="Salesforce Connection_New" CONNECTIONNAME="TargConn_012X1W0B000000000005" CONNECTIONNUMBER="1" CONNECTIONSUBTYPE="Salesforce Connection_New" CONNECTIONTYPE="Application" PARTITIONNAME="" VARIABLE=""/>
+                        <ATTRIBUTE NAME="Max batch size" VALUE="200"/>
+                        <ATTRIBUTE NAME="Use Sfdc Error File" VALUE="YES"/>
+                        <ATTRIBUTE NAME="Use default Assignment Rule Id" VALUE="0"/>
+                    </SESSIONEXTENSION>
+                    <SESSIONEXTENSION NAME="File Reader" SINSTANCENAME="SQ_Exercise_1_src_csv" SUBTYPE="File Reader" TRANSFORMATIONTYPE="Source Qualifier" TYPE="READER">
+                        <CONNECTIONREFERENCE CNXREFNAME="Connection" CONNECTIONNAME="SrcConn_012X1W0B000000000002" CONNECTIONNUMBER="1" CONNECTIONSUBTYPE="" CONNECTIONTYPE="" PARTITIONNAME="" VARIABLE=""/>
+                    </SESSIONEXTENSION>
+                    <SESSIONEXTENSION DSQINSTNAME="SQ_Exercise_1_src_csv" DSQINSTTYPE="Source Qualifier" NAME="File Reader" SINSTANCENAME="Exercise_1_src_csv" SUBTYPE="File Reader" TRANSFORMATIONTYPE="Source Definition" TYPE="READER">
+                        <CONNECTIONREFERENCE CNXREFNAME="Connection" CONNECTIONNAME="SrcConn_012X1W0B000000000002" CONNECTIONNUMBER="1" CONNECTIONSUBTYPE="" CONNECTIONTYPE="" PARTITIONNAME="" VARIABLE=""/>
+                        <ATTRIBUTE NAME="Source file directory" VALUE="D:\IICS HANDSON\sources"/>
+                        <ATTRIBUTE NAME="Source filename" VALUE="Exercise_1_src.csv"/>
+                        <ATTRIBUTE NAME="Source filetype" VALUE="Direct"/>
+                        <ATTRIBUTE NAME="File Reader Truncate String Null" VALUE="NO"/>
+                        <ATTRIBUTE NAME="Input Type" VALUE="File"/>
+                        <ATTRIBUTE NAME="Command" VALUE=""/>
+                        <ATTRIBUTE NAME="Command Type" VALUE="Command Generating Data"/>
+                        <ATTRIBUTE NAME="Concurrent read partitioning" VALUE="Optimize throughput"/>
+                    </SESSIONEXTENSION>
+                    <ATTRIBUTE NAME="Allow Pushdown across Databases" VALUE="NO"/>
+                    <ATTRIBUTE NAME="Enable high precision" VALUE="YES"/>
+                    <ATTRIBUTE NAME="Session retry on deadlock" VALUE="NO"/>
+                    <ATTRIBUTE NAME="User Defined Parameter File" VALUE=""/>
+                    <ATTRIBUTE NAME="Parameter Filename" VALUE=""/>
+                    <ATTRIBUTE NAME="Performance" VALUE=""/>
+                    <ATTRIBUTE NAME="Rollback Transactions on Errors" VALUE="NO"/>
+                    <ATTRIBUTE NAME="Write Backward Compatible Session Log File" VALUE="NO"/>
+                    <ATTRIBUTE NAME="DTM buffer size" VALUE="Auto"/>
+                    <ATTRIBUTE NAME="Session Log File directory" VALUE="$PMSessionLogDir\"/>
+                    <ATTRIBUTE NAME="Pushdown Optimization Context" VALUE="None"/>
+                    <ATTRIBUTE NAME="Write performance data to repository" VALUE="NO"/>
+                    <ATTRIBUTE NAME="Reinitialize aggregate cache" VALUE="NO"/>
+                    <ATTRIBUTE NAME="Java Classpath" VALUE=""/>
+                    <ATTRIBUTE NAME="Number of rows to test" VALUE="1"/>
+                    <ATTRIBUTE NAME="$Target connection value" VALUE=""/>
+                    <ATTRIBUTE NAME="Session Log File Name" VALUE="s_dss_012X1W0I000000000002_$$runId$$.log"/>
+                    <ATTRIBUTE NAME="Enable Test Load" VALUE="NO"/>
+                    <ATTRIBUTE NAME="Allow Temporary Sequence for Pushdown" VALUE="NO"/>
+                    <ATTRIBUTE NAME="Pushdown Optimization" VALUE="None"/>
+                    <ATTRIBUTE NAME="Incremental Aggregation" VALUE="NO"/>
+                    <ATTRIBUTE NAME="Commit Interval" VALUE="5000"/>
+                    <ATTRIBUTE NAME="Commit On End Of File" VALUE="YES"/>
+                    <ATTRIBUTE NAME="Allow Temporary View for Pushdown" VALUE="NO"/>
+                    <ATTRIBUTE NAME="Treat source rows as" VALUE="Insert"/>
+                    <ATTRIBUTE NAME="Commit Type" VALUE="Source"/>
+                    <ATTRIBUTE NAME="Recovery Strategy" VALUE="Fail task and continue workflow"/>
+                    <ATTRIBUTE NAME="Pushdown Optimization Fallback Option" VALUE="Partial PDO"/>
+                    <ATTRIBUTE NAME="Allow Pushdown for User Incompatible Connections" VALUE="NO"/>
+                    <ATTRIBUTE NAME="General Options" VALUE=""/>
+                    <ATTRIBUTE NAME="Collect performance data" VALUE="NO"/>
+                    <ATTRIBUTE NAME="$Source connection value" VALUE=""/>
+                <ATTRIBUTE NAME="Total target partitions" VALUE="1"/><ATTRIBUTE NAME="Total source partitions" VALUE="1"/></SESSION>
+                <TASKINSTANCE DESCRIPTION="Start Description" ISENABLED="YES" NAME="Start" REUSABLE="NO" TASKNAME="Start" TASKTYPE="Start"/>
+                <TASKINSTANCE DESCRIPTION="IOD Integration session" FAIL_PARENT_IF_INSTANCE_DID_NOT_RUN="YES" FAIL_PARENT_IF_INSTANCE_FAILS="YES" ISENABLED="YES" NAME="s_dss_012X1W0I000000000002" REUSABLE="NO" TASKNAME="s_dss_012X1W0I000000000002" TASKTYPE="Session" TREAT_INPUTLINK_AS_AND="YES"/>
+                <WORKFLOWLINK CONDITION="" FROMTASK="Start" TOTASK="s_dss_012X1W0I000000000002"/>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <ATTRIBUTE NAME="Fail task after wait time" VALUE="NO"/>
+                <ATTRIBUTE NAME="Workflow Log File Directory" VALUE="$PMWorkflowLogDir\"/>
+                <ATTRIBUTE NAME="Assigned Web Services Hubs" VALUE=""/>
+                <ATTRIBUTE NAME="Save Workflow log by" VALUE="By runs"/>
+                <ATTRIBUTE NAME="Allow concurrent run with same run instance name" VALUE="NO"/>
+                <ATTRIBUTE NAME="Is Service Visible" VALUE="NO"/>
+                <ATTRIBUTE NAME="Parameter Filename" VALUE=""/>
+                <ATTRIBUTE NAME="Service Timeout" VALUE="0"/>
+                <ATTRIBUTE NAME="Workflow Log File Name" VALUE="wf_dss_012X1W0I000000000002.log"/>
+                <ATTRIBUTE NAME="Expected Service Time" VALUE="0"/>
+                <ATTRIBUTE NAME="Is Service Protected" VALUE="NO"/>
+                <ATTRIBUTE NAME="Service Name" VALUE=""/>
+                <ATTRIBUTE NAME="Maximum automatic recovery attempts" VALUE="5"/>
+                <ATTRIBUTE NAME="Write Backward Compatible Workflow Log File" VALUE="NO"/>
+                <ATTRIBUTE NAME="Enable HA recovery" VALUE="NO"/>
+                <ATTRIBUTE NAME="Maximum number of concurrent runs per Hub" VALUE="0"/>
+                <ATTRIBUTE NAME="Maximum number of concurrent runs" VALUE="0"/>
+                <ATTRIBUTE NAME="Service Level Name" VALUE="Default"/>
+                <ATTRIBUTE NAME="Save workflow log for these runs" VALUE="0"/>
+                <ATTRIBUTE NAME="Current Log Count" VALUE="0"/>
+                <ATTRIBUTE NAME="Automatically recover terminated tasks" VALUE="NO"/>
+                <ATTRIBUTE NAME="Allow concurrent run with unique run instance name" VALUE="NO"/>
+            </WORKFLOW>
+        </FOLDER>
+    </REPOSITORY>
+</POWERMART>

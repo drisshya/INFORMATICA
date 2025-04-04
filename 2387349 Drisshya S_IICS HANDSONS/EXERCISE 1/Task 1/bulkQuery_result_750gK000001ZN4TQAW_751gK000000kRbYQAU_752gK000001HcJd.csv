@@ -1,0 +1,40 @@
+"BillingCity","BillingCountry","BillingPostalCode","BillingState","BillingStreet","Phone","Type"
+"Austin","United States","","TX","312 Constitution Place
+Austin, TX 78767
+USA","(512) 757-6000","Customer - Direct"
+"Burlington","USA","27215","NC","525 S. Lexington Ave","(336) 222-7000","Customer - Direct"
+"Paris","France","75251","","2 Place Jussieu","(014) 427-4427","Customer - Channel"
+"Lawrence","USA","66045","KS","1301 Hoch Drive","(785) 241-6200","Customer - Channel"
+"Chicago","United States","","IL","2334 N. Michigan Avenue, Suite 1500
+Chicago, IL 60601, USA","(312) 596-1000","Customer - Direct"
+"New York","United States","","NY","1301 Avenue of the Americas 
+New York, NY 10019
+USA","(212) 842-5500","Customer - Direct"
+"Portland","United States","","OR","620 SW 5th Avenue Suite 400
+Portland, Oregon 97204
+United States","(503) 421-7800","Customer - Channel"
+"Tucson","United States","","AZ","888 N Euclid 
+Hallis Center, Room 501
+Tucson, AZ 85721
+United States","(520) 773-9050","Customer - Direct"
+"","","","UK","Kings Park, 17th Avenue, Team Valley Trading Estate,
+Gateshead, Tyne and Wear NE26 3HS
+United Kingdom","+44 191 4956203","Customer - Direct"
+"Singapore","","","Singapore","9 Tagore Lane
+Singapore, Singapore 787472
+Singapore","(650) 450-8810","Customer - Direct"
+"Mountain View","United States","","CA","345 Shoreline Park
+Mountain View, CA 94043
+USA","(650) 867-3450","Customer - Channel"
+"San Francisco","US","94087","CA","The Landmark @ One Market","(415) 901-7000",""
+"","","","","","",""
+"Princeton","USA","18540","AA","9 Roszel Road","212555-3324","Customer - Direct"
+"Richmond","USA","23230","VA","6620 W. Broad St.","310446-0098","Customer - Direct"
+"Wichita","USA","67209","KS","7227 W Harry St","625445-9987","Customer - Indirect"
+"San Jose","USA","67399","CA","2145 Hamilton Ave","810345-9000","Customer - Corporate"
+"Macon","USA","31216","GA","6601 Hawkinsville Rd","619551-2345","Customer - Enterprise"
+"Brookfield","USA","53005","WI","95 N Moorland Rd","415404-5512","Customer - Direct"
+"Grand Rapids","USA","49503","MI","114 Division Ave N","510443-5647","Customer - Direct"
+"Pittsburgh","USA","15220","PA","651 Holiday Dr","314889-0032","Customer - Direct"
+"New York","USA","10005","NY","32 Old Slip","703332-8850","Customer - Direct"
+"Los Angeles","USA","15220","CA","651 Holiday Dr","818231-8700","Customer - Direct"

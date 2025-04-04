@@ -1,0 +1,21 @@
+> OIE_002 INFO 2025-04-04T03:34:20.066Z Starting export operation.
+Execution Client: UI
+Job Name: Ex1_Synchronization-1743738169461
+Organization: Cognizant
+Job Id: kQGREinqheEgs6OdN1ll6e
+User: drisshya.sunil@gmail.com
+> OIE_004 INFO 2025-04-04T03:34:20.147Z Successfully exported object [/Explore/Default] of type [Project] id [7hxgVlGvJsUhpVntKYWh6A]
+> OIE_004 INFO 2025-04-04T03:34:20.147Z Successfully exported object [/SYS/_SYSTEM_PROJECT] of type [Project] id [8D3ALXkXljAbns6COmpaIU]
+> OIE_004 INFO 2025-04-04T03:34:20.201Z Successfully exported object [/SYS/_SYSTEM_FOLDER] of type [Folder] id [bWzkX21UQ2Cc5kQBcW7MmO]
+> OIE_004 INFO 2025-04-04T03:34:20.283Z Successfully exported object [/SYS/3289f249da3e523] of type [AgentGroup] id [81GTFiSOiEogGyckx2q5Gu]
+> OIE_004 INFO 2025-04-04T03:34:20.427Z Successfully exported object [/SYS/Drisshya_IICS_src] of type [Connection] id [aQPRcM2LwM5d1nUTaY1cAB]
+> OIE_004 INFO 2025-04-04T03:34:20.427Z Successfully exported object [/SYS/ex_1_salesforce] of type [Connection] id [aWFiZx59vp9fVDhJi4E34A]
+> OIE_004 INFO 2025-04-04T03:34:20.635Z Successfully exported object [/Explore/Default/Ex1_Synchronization] of type [DSS] id [66yxHpQ0iKFleysIKHk9YF]
+> OIE_003 INFO 2025-04-04T03:34:20.635Z Finished export operation.
+Job Name: Ex1_Synchronization-1743738169461
+Start Time: 04/04/25 3:33 AM
+End Time: 04/04/25 3:34 AM
+Started by: drisshya.sunil@gmail.com
+Start Method: UI
+Source Organization: Cognizant
+Status: SUCCESSFUL

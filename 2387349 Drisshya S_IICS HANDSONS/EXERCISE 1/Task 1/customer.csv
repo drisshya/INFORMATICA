@@ -1,0 +1,11 @@
+Name,AreaCode,PhoneNumber,Street,City,State,PostalCode,Country,Customer_Type
+Smith's Interiors,212,555-3324,9 Roszel Road,Princeton,AA,18540,USA,Customer - Direct
+ABC Repairs,310,446-0098,6620 W. Broad St.,Richmond,VA,23230,USA,Customer - Direct
+Remingtons,625,445-9987,7227 W Harry St,Wichita,KS,67209,USA,Customer - Indirect
+Omneon,810,345-9000,2145 Hamilton Ave,San Jose,CA,67399,USA,Customer - Corporate
+ABC Carpet,619,551-2345,6601 Hawkinsville Rd,Macon,GA,31216,USA,Customer - Enterprise
+Shetlands,415,404-5512,95 N Moorland Rd,Brookfield,WI,53005,USA,Customer - Direct
+Mervyns,510,443-5647,114 Division Ave N,Grand Rapids,MI,49503,USA,Customer - Direct
+PPG,314,889-0032,651 Holiday Dr,Pittsburgh,PA,15220,USA,Customer - Direct
+Joe's,703,332-8850,32 Old Slip,New York,NY,10005,USA,Customer - Direct
+Fred Seagel,818,231-8700,651 Holiday Dr,Los Angeles,CA,15220,USA,Customer - Direct

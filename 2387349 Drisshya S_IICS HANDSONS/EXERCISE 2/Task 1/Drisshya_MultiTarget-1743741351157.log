@@ -1,0 +1,21 @@
+> OIE_002 INFO 2025-04-04T04:27:03.358Z Starting export operation.
+Execution Client: UI
+Job Name: Drisshya_MultiTarget-1743741351157
+Organization: Cognizant
+Job Id: aA6ciWyb3wufcnZebX72ik
+User: drisshya.sunil@gmail.com
+> OIE_004 INFO 2025-04-04T04:27:03.423Z Successfully exported object [/Explore/Default] of type [Project] id [7hxgVlGvJsUhpVntKYWh6A]
+> OIE_004 INFO 2025-04-04T04:27:03.423Z Successfully exported object [/SYS/_SYSTEM_PROJECT] of type [Project] id [8D3ALXkXljAbns6COmpaIU]
+> OIE_004 INFO 2025-04-04T04:27:03.472Z Successfully exported object [/SYS/_SYSTEM_FOLDER] of type [Folder] id [bWzkX21UQ2Cc5kQBcW7MmO]
+> OIE_004 INFO 2025-04-04T04:27:03.533Z Successfully exported object [/SYS/3289f249da3e523] of type [AgentGroup] id [81GTFiSOiEogGyckx2q5Gu]
+> OIE_004 INFO 2025-04-04T04:27:03.669Z Successfully exported object [/SYS/Drisshya_IICS_src] of type [Connection] id [aQPRcM2LwM5d1nUTaY1cAB]
+> OIE_004 INFO 2025-04-04T04:27:03.669Z Successfully exported object [/SYS/ex_1_salesforce] of type [Connection] id [aWFiZx59vp9fVDhJi4E34A]
+> OIE_004 INFO 2025-04-04T04:27:03.850Z Successfully exported object [/Explore/Default/Drisshya_MultiTarget] of type [DTEMPLATE] id [6xJgNRoJ2THjQ5XV9SiiMm]
+> OIE_003 INFO 2025-04-04T04:27:03.850Z Finished export operation.
+Job Name: Drisshya_MultiTarget-1743741351157
+Start Time: 04/04/25 4:27 AM
+End Time: 04/04/25 4:27 AM
+Started by: drisshya.sunil@gmail.com
+Start Method: UI
+Source Organization: Cognizant
+Status: SUCCESSFUL
