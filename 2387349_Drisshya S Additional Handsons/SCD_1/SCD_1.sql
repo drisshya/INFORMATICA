@@ -1,0 +1,10 @@
+CREATE TABLE customer (Name varchar(20),Id int,Location varchar(20));
+select * from customer;
+create table target(Dim_key int,Name varchar(20),Id int,Location varchar(20));
+create table target1(Dim_key int,Name varchar(20),Id int,Location varchar(20));
+select * from target;
+select * from target1;
+INSERT INTO customer values ('John',10,'Chennai');
+INSERT INTO customer values ('Priya',20,'Bangalore');
+INSERT INTO customer values ('Riya',30,'Coimbatore');
+drop table target1;

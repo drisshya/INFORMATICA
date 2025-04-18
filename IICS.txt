@@ -1,0 +1,120 @@
+IICS
+-> Data Integration and ETL tool.
+-> IPAAS - Integrated Platform as a service.
+-> It is a cloud solution offered by Informatica.
+-> It has features of Informatica Powercenter.
+-> Supports batch processing and real time streaming data.
+
+CAPABILITIES - EXAMPLE
+On-premise - SQL Server
+On-cloud - Cloud
+Hybrid - All capabilities
+
+ARCHITECTURE
+(2 Components - Informatica Cloud, Secure Agent)
+
+INFORMATICA CLOUD
+-> Bundle of hardware and software that informatica provides.
+-> Utilize resources in the cloud and run the application in the cloud.
+-> Don't want to install powercenter or anything. IC can be accessed through web browser.
+
+SECURE AGENT
+-> Replaces the function of Powercenter
+-> Light weight software.
+-> Installed in Server, behind the organization's firewall and in on-premise.
+-> Acts as a bridge between on-premise and cloud.
+-> Also acts as a medium of data transfer between on-premise and cloud.
+-> Process data locally and securely.
+-> Integration service is replaced by secure agent in IICS.
+
+[Informatica cloud automatically updates secure agent, restarts it aswell.
+Developer do not worry about Administrator activities.]
+
+DIFFERENCES
+
+1> Hardware and software installed     Web browser
+   [on-premise solution]  		      [cloud based solution]
+2> Mapping					Same Mapping
+3> Session task  				Mapping task[replaced by]
+4> Workflow					Taskflow[replaced by]
+						(Set of instruction to execute the mapping task)
+5> PowerCenter Designer			Web based interface
+   [GUI Interface]
+6> Traditional ETL Service		Also provides variety of cloud native Integration Services.
+						[Data Quality, Data Governance, Application Integration]
+7> Integration service is reponsible   Secure agent is reponsible for execution
+   for execution of workflows		of taskflows.
+
+SERVICES
+--------------------------------------------------------------------------------------------------
+1>DATA INTEGRATION SERVICE
+
+Runs the batch jobs, executes the mapping.
+
+i> MAPPING TASK
+-> Similar to powercenter mapping.
+-> Used to define the data flow logic.
+
+Taskflow [linear and dynamic]
+-> Workflow in Powercenter
+-> Combine other task and run them together in a flow.
+-> Run these in sequence, parallel or decision.
+
+ii> REPLICATION TASK
+-> Replicate more than one object from to target
+-> You can use either full load or incremental load for replicating the data.
+
+iii> SYNCHRONIZATION TASK
+-> Synchronize the data between the source and target.
+-> Provides DML operations like insert, update, upsert and delete.
+-> Sync only one object data at a time.
+
+iv> MASKING TASK
+-> Masking source data and create a data subset of source data in target.
+
+v> POWERCENTER TASK
+-> Import powercenter workflow and run it as a Cloud Data Integration Task.
+
+vi> NOTIFICATION TASK, COMMAND TASK, WAIT TASK, EVENT TASK
+
+
+2> MONITOR
+-> Similar to workflow monitor.
+-> Check running jobs, failed jobs, success jobs.
+-> Provides options to restart/stop jobs and download logs.
+
+3> ADMINISTRATOR
+-> Where we create source and target connections, flatfile, database.
+-> Download your secure agent from here and install it on your server.
+-> Copy/Clone the connections.
+-> Properties of Secure Agent can also be configured from here.
+-> Manage run-time environments.
+
+4> CDI - Cloud Data Integration
+5> CAI - Cloud Application Integration
+6> API Manager
+7> Data Quality
+8> Data Integration
+9> Data Profiling (Scoring data as high/low profile)
+10> Data Validation 
+11> Data Application Service
+12> Mass ingestion (Massly ingest very huge amounts of data)
+[Bulk loading of data from source to target, handles large volume]
+13> App integration (Data Governance)
+--------------------------------------------------------------------------------------------------
+There is no *Update Strategy Transformation* in IICS
+Either you choose insert, update, delete, upsert or data driven option in target side.
+by using synchronization task.
+
+Types of Status - Start, Queued, Running, Success, Warning
+		     Failed, Stopped, Aborted
+
+Secure Agent runs 3 major service on server
+DIS (Data)    - Batch jobs
+PIS (Process) - Real time API's
+CIS (Common)  - Command line, Shell scripts
+
+All metadata is stored in informatica cloud repository.
+As a user no access to repository database.
+Can't use SQL Query.
+

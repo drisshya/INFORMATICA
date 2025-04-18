@@ -1,0 +1,793 @@
+
+Satyajit Deb 9836781005
+
+
+Files and directories (another name for folders) are at the heart of unix/Linux, so being able to create, view, move, delete them from the command line is very important and quite powerful.
+
+[user@localhost ~]$echo $SHELL
+******************************
+Directory navigation
+*******************************
+Command 	Utility
+pwd 	Get the full path of the current working directory.
+cd - 	Navigate to the last directory you were working in.
+cd ~ 	or just cd Navigate to the current user's home directory.
+cd .. 	Go to the parent directory of current directory (mind the space between cd 		and ..)
+cd [FilePath] Navigate by give path location
+
+User identification and who is who in Linux world
+----------------------------------------------------
+
+Command 	Usability
+-------		---------
+hostname 	Display hostname of the system.
+
+hostname -f 	Displays Fully Qualified Domain Name (FQDN) of the system.
+passwd 		Change password of current user.
+whoami 		Username of the users logged in at the terminal.
+who 		List of all the users currently logged in as a user.
+w 		Display current system status, time, duration, list of users currently logged in on system and 		other user information.
+last 		Who recently used the system.
+last 		root When was the last time root logged in as user.
+
+Getting information on a running Linux kernel
+
+	$ uname -a
+
+
+*********************************
+Process related information
+*********************************
+
+Command 		Usability
+--------		---------
+top 		List all processes sorted by their current system resource usage. 		Displays a continually 	updated
+		display of processes (By default 3 seconds). Use q key to exit top.
+ps 		List processes currently running on current shell session
+ps -u 	root 	List all of the processes and commands root is running
+ps aux 		List all the processes by all users on the current system
+
+
+*************************************
+Listing files inside a directory
+*************************************
+
+Command 	Utility
+--------	--------
+ls -l 		List the files and directories in the current directory in long 	
+ls -ld 		dir-name List information about the directory dir-name instead of  its contents.
+ls -a 		List all the files including the hidden ones 					
+ls -F 		Appends a symbol at the end of a file name to indicate its type 
+		(* means executable, / 	means directory, @ means symbolic link, = means socket, | means   named 		pipe, > means door).
+ls -lt 		List the files sorted by last modified time with most recently 	modified files showing at the 		top (remember -l option provides the long format which has better readability).
+ls -lh 		List the file sizes in human readable format.
+ls -lR 		Shows all subdirectories recursively.tree Will generate a tree representation of the file 
+		system starting from the current directory.
+
+
+Long Format Listing:
+		$ ls -l
+Hidden Files Listing
+		$ ls -a
+Reverse Order Listing
+		$ ls -r
+Sorting by File Size
+		$ ls -S
+Sorting by Modification Time
+		$ ls -t
+Displaying Human-Readable File Sizes
+		$ ls -lh
+		
+	$ ls
+		abc abcdef abcdefghijk abc.php abc.txt ABC.txt def mydoc.odt xyz.xml
+		ABC ABCDEF abcdef.odt abctxt abc.TXT alphabet DEF xyz
+	Matching Files with Prefix: 
+
+	$ ls a*
+		abc abcdefghijk abc.php abc.txt alphabet
+		abcdef abcdef.odt abctxt abc.TXT
+	$ ls A*
+		ABC ABCDEF ABC.txt
+	$ ls A??
+		ABC
+	$ ls a??
+		abc
+	
+	$ ls a*b*
+		abc abcdefghijk abc.php abc.txt alphabet
+		abcdef abcdef.odt abctxt abc.TXT
+	$ ls *.txt
+		abc.txt ABC.txt
+	$ ls *.???
+		abcdef.odt abc.php abc.txt abc.TXT ABC.txt mydoc.odt xyz.xml
+	$ ls *txt
+		abctxt abc.txt ABC.txt	
+	$ ls *h*
+		abcdefghijk abc.php alphabet
+	$ ls a[a-z]c.txt
+		abc.txt
+	$ ls [clst][io]?t*
+	
+	$ # files starting with a lowercase vowel
+	$ ls [aeiou]*
+		abc abcdefghijk abc.php abc.txt alphabet
+		abcdef abcdef.odt abctxt abc.TXT
+	$ # files not starting with a lowercase vowel
+	$ ls [!aeiou]*
+		ABC ABCDEF ABC.txt def DEF mydoc.odt xyz xyz.xml
+	$ ls -ld /etc/rc{0,1,2,3,4,5,6}.d
+		drwxr-xr-x 2 root root 4096 Nov 25 19:38 /etc/rc0.d
+		drwxr-xr-x 2 root root 4096 Nov 25 19:38 /etc/rc1.d
+		drwxr-xr-x 2 root root 4096 Nov 25 19:38 /etc/rc2.d
+
+******************************************
+File/directory create, copy and remove
+******************************************
+
+Command 		Utility
+-------			-------
+cp -p   source 	destination
+			Will copy the file from source to destination. -p stands for preservation. It preserves 			the original attributes of file while copying like file owner,timestamp,group, 			permissions etc.
+
+cp -R source_dir destination_dir 
+			Will copy source directory to specified destination 	recursively.
+
+mv file1 file2 
+			In Linux there is no rename command as such. Hence mv moves/renames the
+			file1 to file2.
+rm -i filename
+			Asks you before every file removal for confirmation. IF YOU 	ARE A NEW USER
+			TO LINUX COMMAND LINE, YOU SHOULD ALWAYS USE rm -i. You can specify  multiple files.
+
+rm -R dir-name 		Will remove the directory dir-name recursively.
+rm -rf dir-name
+			Will remove the directory dir recursively, ignoring non-existent files and will never 				prompt for anything. 
+rmdir dir-name 		Will remove the dir-name, if it's empty. This command can only remove empty dir.
+
+mkdir dir-name 		Create a directory dir-name.
+
+mkdir -p dir-name/dir-name 
+			Create a directory hierarchy. Create parent directories as needed, if they don't
+			exist. You can specify multiple directories.
+			touch filename Create a file filename, if it doesn't exist, otherwise change the 			timestamp of the file to current time.
+
+Create an empty directory called myFirstDirectory:
+	$ mkdir myFirstDirectory
+Create multi path directory: (creates two directories, src and myFirstDirectory)
+	$ mkdir -p src/myFirstDirectory 
+
+Create Multiple Directory 
+	$ mkdir -p /opt/weblogic/domains/domain{1,2,3}
+Move the file into the directory:
+	$ mv myFirstFile myFirstDirectory/
+You can also rename the file:
+	$ mv myFirstFile secondFileName
+Delete a non-empty directory (i.e. contains files and/or other directories):
+	$ rm -rf myFirstDirectory
+
+
+****************************************************
+File/directory permissions and groups
+****************************************************
+Command 			Utility
+------------------------------------------
+Relative Mode
+--------------
+chmod <specification> filename Change the file permissions. 
+Specifications 
+	= u user, g group, o other, 
+	+ add permission, 
+	- remove, 
+	r read, w write,x execute.
+chmod -R <specification> dirname
+			 Change the permissions of a directory recursively. To change permission of
+			 a directory and everything within that directory, use this command.
+chmod go=+r myfile 	 Add read permission for the owner and the group.
+chmod a +rwx myfile 	 Allow all users to read, write or execute myfile.
+chmod go -r myfile 	 Remove read permission from the group and others.
+chown owner1 filename 	 Change ownership of a file to user owner1.
+chgrp grp_owner filename Change primary group ownership of file filename to group grp_owner.
+chgrp -R grp_owner dir-name
+			Change primary group ownership of directory dir-name to group grp_owner
+			recursively. To change group ownership of a directory and everything within
+			that directory, use this command.
+
+groupadd groupname
+usermod -a -G group1,group2 username
+groupdel groupname	Delete groupname.
+Absolute Mode
+--------------
+	1	Execute
+	2 	Write
+	4	Read
+	3	2+1 Write+Execute
+	5	4+1 Read+Execute
+	6	2+4 Write+read
+	7	4+2+1 Read+Write+Execute
+	r is represented by a value of 4,
+	w is represented by 2, and x is represented by a 1.
+	 So if only you want to be able to modify the contents to the test 	directory
+Owner rwx = 4+2+1 = 7
+Group r-x = 4+0+1 = 5
+Other r-x = 4+0+1 = 5
+
+echo " Welcome to Unix " > it005doc.txt
+  cat it005doc.txt
+
+
+
+***************************
+	File Manipulation
+***************************
+
+Create an empty text file called myFile:
+	$ touch myFile
+Rename myFile to myFirstFile:
+	$ mv myFile myFirstFile
+View the contents of a file:
+	$ cat myFirstFile
+View the content of a file with pager (one screenful at a time):
+	$ less myFirstFile
+View the first several lines of a file:
+	$ head myFirstFile
+View the last several lines of a file:
+	$ tail myFirstFile
+**********************************************
+File Compression with 'tar'
+Common Options -
+-c 	--create Create a new archive.
+-x 	--extract Extract files from an archive.
+-t 	--list List the contents of an archive.
+-f 	--file=ARCHIVE Use archive file or dir ARCHIVE.
+-v 	--verbose Verbosely list files processed.
+		Compression Options -
+-a 	--auto-compress Use archive suffix to determine the compression program.
+-j 	--bzip2 Filter the archive through bzip2.
+-J 	--xz --lzma Filter the archive through xz.
+-z 	--gzip Filter the archive through gzip.
+Compress a folder
+------------------
+This creates a simple archive of a folder :
+	$ tar -cf ./my-archive.tar ./my-folder/
+Verbose output shows which files and directories are added to the archive, use the -v option:
+	$ tar -cvf ./my-archive.tar ./my-folder/
+For archiving a folder compressed 'gzip', you have to use the -z option :
+	$ tar -czf ./my-archive.tar.gz ./my-folder/
+You can instead compress the archive with 'bzip2', by using the -j option:
+	$ tar -cjf ./my-archive.tar.bz2 ./my-folder/
+Or compress with 'xz', by using the -J option:
+	$ tar -cJf ./my-archive.tar.xz ./my-folder/
+Extract a folder from an archive
+----------------------------------
+There is an example for extract a folder from an archive in the current location :
+	$ tar -xf archive-name.tar
+If you want to extract a folder from an archive to a specfic destination :
+
+	$ tar -xf archive-name.tar -C ./directory/destination
+
+List contents of an archive
+------------------------------
+List the contents of an archive file without extracting it:
+	$ tar -tf archive.tar.gz
+	Folder-In-Archive/
+	Folder-In-Archive/file1
+	Folder-In-Archive/Another-Folder/
+	Folder-In-Archive/Another-Folder/file2
+List archive content
+There is an example of listing content :
+		$tar -tvf archive.tar
+	The option -t is used for the listing. For listing the content of a tar.gz archive, 
+	you have to use the -z option
+	anymore :
+	       $ tar -tzvf archive.tar.gz
+
+
+
+Detecting Linux distribution name and version
+------------------------------------------------
+cat /etc/redhat-release
+
+Print information about the current system
+	Uname is the short name for unix name. Just type uname in console to get information about your operating
+system.
+
+	
+
+All the options:
+-s, --kernel-name Print the kernel name.
+-n, --nodename Print the network node hostname.
+-r, --kernel-release Print the kernel release.
+-v, --kernel-version Print the kernel version.
+-m, --machine Print the machine hardware name.
+-p, --processor Print the processor type, or "unknown".
+-i, --hardware-platform Print the hardware platform, or "unknown".
+-o, --operating-system Print the operating system.
+--help Display a help message, and exit.
+--version Display version information, and exit.
+
+
+Changing default shell
+------------------------
+
+Most modern distributions will come with BASH (Bourne Again SHell) pre-installed and configured as a default shell
+
+	[user@localhost ~]$ chsh -l
+
+	or
+	
+	[user@localhost ~]$ cat /etc/shells
+
+
+
+
+*************************************************************************************
+				GREP
+************************************************************************************
+grep
+------
+
+	Grep command in Unix/Linux is a powerful tool that searches for matching a 
+	regular expression against text in a file, multiple files or a stream of input.
+        It searches for the pattern of text that you specify on the command line and 	
+
+prints output for you.
+
+Search for the given string in a single file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[user1@server1]#grep "literal_string" filename
+
+
+Checking for the given string in multiple files.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[user1@server1]#grep "Sample" sam_*
+
+
+Case insensitive search using grep -i
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[user1@server1]#grep -i "sample" samdoc
+
+Displaying the line numbers.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[user1@server1]# grep -n “word*” file.txt
+
+
+Highlighting the search using grep
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[user1@server1]#grep –color “linux” index.html
+
+
+Checking for full words, not for sub-strings using grep -w
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[user1@server1]#grep –w “sub” index.html
+
+
+Search the pattern recursively using -r option
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[user1@server1]#grep -r linux /etc/
+
+Counting the lines when words match
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+?[user1@server1]#grep -c 'test' /home/user1/test.txt
+
+
+
+
+
+
+Match regular expression in files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	* e - go to the end of the current word.
+ 	* E - go to the end of the current WORD.
+ 	* b - go to the previous (before) word.
+ 	* B - go to the previous (before) WORD.
+ 	* w - go to the next word.
+ 	* W - go to the next WORD.
+
+Display N lines after match
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	grep -A <N> "string" FILENAME
+
+[user1@server1]# grep -A 3 "string" samfile
+
+Display N lines before match
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[user1@server1]# grep -B 3 "string" samfile
+
+
+ display the lines which does not matches all the given pattern.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	grep -v -e "pattern" -e "pattern"    filename
+
+[user1@server1]# grep -v -e "a" -e "b" -e "c" test-file.txt
+
+
+*************************************************************************************
+		List All Environment Variables Command
+*************************************************************************************
+When interacting with your server through a shell session, there are 
+many pieces of information that your shell compiles to determine its 
+behavior and access to resources.
+
+One way that the shell keeps track of all of these settings and details 
+is through an area it maintains called the environment
+
+	 Display all my environment variables using bash shell
+
+	a) printenv command – Print all or part of environment.
+
+	b) env command – Print all exported environment or run a program in a modified 
+
+environment.
+
+	c) set command – Print the name and value of each shell variable.
+
+	A list of the commonly used variables in Linux
+	-----------------------------------------------
+
+
+	
+System Variable		Meaning	
+----------------------------------		
+BASH_VERSION	Holds the version of this instance of bash.	echo $BASH_VERSION
+HOSTNAME	The name of the your computer.	echo $HOSTNAME
+CDPATH		The search path for the cd command.	echo $CDPATH
+HISTFILE	The name of the file in which command history is saved.	echo $HISTFILE
+HISTFILESIZE	The maximum number of lines contained in the history file.	
+		echo $HISTFILESIZE
+HISTSIZE	The number of commands to remember in the command history. 
+		The default value is 500.	echo $HISTSIZE
+HOME		The home directory of the current user.	echo $HOME
+LANG		Used to determine the locale category for any category not 
+		specifically selected with a variable starting with LC_.	
+		echo $LANG
+PATH		The search path for commands. It is a colon-separated list of directories
+		in which the shell looks for commands.	echo $PATH
+PS1		Your prompt settings.	echo $PS1
+TMOUT		The default timeout for the read builtin command. Also in an interactive 
+
+shell, the value is interpreted as
+		the number of seconds to wait for input after issuing the command. If not 
+
+input provided it will logout user.	echo $TMOUT
+TERM		Your login terminal type.	echo $TERM
+SHELL		Set path to login shell.	echo $SHELL
+DISPLAY		Set X display name	echo $DISPLAY
+
+EDITOR		Set name of default text editor.	export EDITOR=/usr/bin/vim
+
+
+************************************************************************************
+				I/O Redirection 
+************************************************************************************
+
+
+	 Powerful UNIX mechanism of redirecting input, output and errors
+	
+	Redirection can be defined as changing the way from where commands read input to
+	where commands sends output. You can redirect input and output of a command.
+
+
+	Standard Streams In I/O Redirection
+	------------------------------------
+
+	-Standard input (stdin) : 
+			The stdin stream is numbered as stdin (0). 
+			The bash shell takes input from stdin. 
+			By default, keyboard is used as input.
+	-standard output (stdout) : 
+			The stdout stream is numbered as stdout (1). 
+			The bash shell sends output to stdout. 
+			Output goes to display.
+	-Standard error (stderr) : 
+			The stderr stream is numbered as stderr (2). 
+			The bash shell sends error message to stderr. 
+			Error message goes to display.
+
+	Shell Metacharacters
+	---------------------
+			<
+			>
+			|
+			>>
+	Redirection Into A File
+	------------------------
+			> 	: standard output  or	 1>  (Overwrite the file)
+			< 	: standard input   or  0<
+			2> 	: standard error
+			>>	: standard output(Append)
+			<<	: standard input 
+			2>>
+How to use output of one command as input for another
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	[user1@server1]#ls -l > listfile
+	
+	[user1@server1]#cat doc1 doc2 > doc3
+	
+How to append output of multiple commands to a file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+	[user1@server1]#cat doc4 >>doc3
+
+How to input the text to empty file using >
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	[user1@server1]#touch docfile.txt
+
+	[user1@server1]#cat > docfile.txt
+			      >Powerful UNIX mechanism of redirecting 
+			      >input, output and errors 
+		[Press ctrl+d  to the End]
+	
+	OR
+	
+	[user1@server1]#echo " sample text 1234" > docfile.txt
+
+	OR
+
+	[user1@server1]# cat <<EOF > docfile.txt
+			>Powerful UNIX mechanism of redirecting 
+			> input, output and errors 
+                        >EOF
+		
+Write the error from command to another file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	[user1@server1]#ls -l 2> errorrep.txt
+
+
+	
+	
+[user1@server1]#touch docfile.txt
+
+[user1@server1]#echo " > will overwrite without waring" > docfile.text
+[user1@server1]#echo " test 123" > docfile.text
+[user1@server1]#set -o noclobber
+[user1@server1]#echo " test 123" > docfile.text
+// will not allow to overwite 
+
+
+
+
+	
+
+	
+[user1@server1]#echo "noclobber set the alter a nd remainder" >| docfile.txt  
+
+
+This command helps in redirecting the stdout and stderr in the same file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[user1@server1]#touch dirlist
+
+[user1@server1]#ls > dirlist 2>&1  
+
+[user1@server1]#ls -l a*.txt > dirlist 2>&1  
+
+
+******************************************************************************
+		PIPES
+******************************************************************************
+The Pipe is a command in Linux that lets you use two or more commands such that 
+output of one command serves as input to the next.
+
+[user1@server1]#dmesg	//Display kernel info
+
+[user1@server1]#dmesg | less
+
+
+[user1@server1]#dmesg | more
+
+
+
+Print Only First 20 Lines of Output
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[user1@server1]#dmesg | head  -20
+
+Print Only Last 20 Lines of Output
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[user1@server1]#dmesg | tail -20
+
+Search Particular String
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[user1@server1]#dmesg | grep -i usb
+
+
+List all Detected Devices
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[user1@server1]# dmesg | grep sda
+
+***************************************************************************************
+				Sed Command 
+***************************************************************************************
+	SED command in UNIX is stands for stream editor and it can perform lot’s of 
+	function on file like, searching, find and replace, insertion or deletion.
+
+	SED is a powerful text stream editor. Can do insertion,
+		 deletion, search and replace(substitution).
+	SED command in unix supports regular expression which allows 
+		it perform complex pattern matching.
+
+Replacing or substituting string
+--------------------------------
+
+[user1@server1]# sed 's/unix/linux/' geekfile.txt
+
+Replacing the nth occurrence of a pattern in a line 
+------------------------------------------------------
+[user1@server1]# sed 's/unix/linux/2' geekfile.txt
+
+Replacing all the occurrence of the pattern in a line
+-------------------------------------------------------
+[user1@server1]# sed 's/unix/linux/g' geekfile.txt
+
+
+
+Replacing string on a specific line number
+--------------------------------------------
+[user1@server]#sed '3 s/unix/linux/' geekfile.txt
+
+********************************************************************************
+				FIND
+********************************************************************************
+
+Find Files Using Name in Current Directory
+-------------------------------------------
+	# find . -name tecmint.txt
+
+Find Files Under Home Directory
+-------------------------------------------
+	# find /home -name tecmint.txt
+
+Find Files Using Name and Ignoring Case
+-------------------------------------------
+	# find /home -iname tecmint.txt
+
+
+Find Directories Using Name
+-------------------------------------------
+	# find / -type d -name Tecmint
+
+ Find txt Files Using Name
+---------------------------------------------
+	# find . -type f -name tecmint.php
+
+
+Find all txt Files in Directory
+---------------------------------------------
+	# find . -type f -name "*.txt"
+
+
+Find Files With 777 Permissions
+---------------------------------------------
+	# find . -type f -perm 0777 -print
+	//Find all the files whose permissions are 777.
+
+Find Files Without 777 Permissions
+--------------------------------------------
+	# find / -type f ! -perm 777
+	//Find all the files without permission 777.
+
+Find Read Only Files
+--------------------------------------
+	# find / -perm /u=r
+
+Find Executable Files
+--------------------------------------
+	# find / -perm /a=x
+
+Find all Empty Files
+---------------------------------------
+	# find /tmp -type f -empty
+
+Find all Empty Directories
+---------------------------------------
+	# find /tmp -type d -empty
+
+File all Hidden Files
+--------------------------------------
+	# find /tmp -type f -name ".*"
+
+
+Find Single File Based on User
+--------------------------------------
+	# find / -user root -name tecmint.txt
+
+
+Find all Files Based on Group
+--------------------------------------
+	# find /home -group developer
+
+Find Last 50 Days Modified Files
+--------------------------------------
+	# find / -mtime 50
+
+Find Last 50 Days Accessed Files
+--------------------------------------	
+	# find / -atime 50
+
+Find 50MB Files
+----------------------------
+
+	# find / -size 50M
+
+Find and Delete 100MB Files
+----------------------------
+	# find / -size +100M -exec rm -rf {} \;
+
+
+Find Specific Files and Delete
+-------------------------------
+	# find / -type f -name *.mp3 -size +10M -exec rm {} \;
+
+----------------------------
+Working Storage
+---------------------------
+ check disk space with df command
+-----------------------------------------------
+	#df
+
+Information about specific filesystem
+-------------------------------------------------
+	$ df /dev/sda
+
+	$ df -h 		### Human format
+	$ df -m 		### Show output size in one-megabyte
+	$ df -k 		### Show output size in one-kilobyte blocks (default)
+
+
+Display output using inode usage instead of block usage
+---------------------------------------------------------------------------
+	An inode is a data structure on a Linux file system that stores all information about file. 
+	To list inode information,
+
+	$ df -i
+	$ df -i -h
+
+Find out the type of each file system displayed
+----------------------------------------------------------------
+	$ df -T
+
+
+Check disk space with the du command
+------------------------------------------------------
+	#du  -h
+
+CUT Command
+----------------------------
+	Extract portion of text from a file by selecting columns.
+	#cut -c2  test.txt
+
+	Select Column of Characters using Range
+	# cut -c1-5 test.txt
+
+	Select a Specific Field from a File
+	# cut -d':' -f1 /etc/passwd
+
+
+	Select Multiple Fields from a File
+
+	
+---------------------------------------------
+
+How do I create soft link / symbolic link?
+	
+	$ ln -s file1 link1
+
+	$ ls -l file1 link1
+
+-----------------------------------------
+
+#!/bin/sh or #!/usr/bin/sh Declares a Bourne shell
+#!/bin/ksh or #!/usr/bin/ksh Declares a Korn shell
+#!/bin/csh or #!/usr/bin/csh Declares a C shell
+#!/bin/Bash or #!/usr/bin/Bash Declares a Bourne-Again (Bash) shell
+----------------------------------------
+
+
+	
