@@ -1,0 +1,193 @@
+Part-1
+--------------
+
+1. select productCode, productName, buyPrice*1.18 as finalprice from products 
+where buyPrice*1.18>112;
+
+2. select productCode, productName from products where
+productScale like "%12";
+
+3. select productCode, productName from products 
+where quantityInStock<=100;
+
+4. select productCode, productName from products 
+where quantityInStock<10000 and quantityInStock>5000;
+
+5. select productCode, productName from products 
+where productName like '%Ford%';
+
+6. select productCode, productVendor, productLine from products 
+where productLine!='Plane' and productVendor like '%Classics%';
+
+7. select productCode, productName, productLine, quantityInStock from products 
+where quantityInStock>5000 and productLine in ('Planes','Motorcycles','Ships');
+
+8. select productCode, productName, MSRP, MSRP-buyPrice as profit from products 
+where MSRP-buyPrice>buyPrice/2;
+
+9. select orderNumber, productCode, quantityOrdered from orderdetails 
+where quantityOrdered>50 and quantityOrdered<100 and priceEach>=100;
+
+10. select orderNumber, orderDate from orders
+where status!='Shipped';
+
+11. select orderNumber, orderDate from orders
+where orderDate between "2003-01-01" and "2003-07-01 23:59:59";
+
+12. select employeeNumber, firstName from employees
+where officeCode!=1;
+
+13. select concat(contactLastName, " ",contactFirstName) as Name, 
+concat(addressLine1, " ",addressLine2," ", city, " ",
+state,'-',postalCode,'.',country) as Address
+from customers;
+
+--------------
+
+Part-2
+--------------
+
+1. select productCode,quantityOrdered from orderdetails
+where productcode like 'S700_%';
+
+2. select employeeNumber,firstName,substring(extension,2,5) as extension
+from employees;
+
+3. select productCode, sum(quantityOrdered) from orderdetails
+group by productCode
+having sum(quantityOrdered)>1000;
+
+4. select productCode, productName,
+case when quantityInStock<1000 then 'Immediate Order Place'
+when quantityInStock<3000 then '1 Week stock left'
+when quantityInStock<6000 then '2 Week stock left'
+when quantityInStock<10000 then '1 Month stock left'
+else 'Over Stocked'
+end as Stock_info
+from products;
+
+5. select year(orderDate) as years,count(orderNumber) as orders from orders
+group by years
+having orders>5;
+
+6. select orderNumber, orderDate, 
+case when shippedDate is null then status
+else shippedDate
+end as shipped_Date
+from orders
+where orderDate between "2005-05-01" and "2005-05-31 23:59:59";
+
+7. select employeeNumber, concat("Mr/Mrs. ",firstName, " ", lastName)
+as employeeName
+from employees where officeCode in (5,6,7);
+
+8. select employeeNumber, firstName from employees 
+where substring(firstName,1,1) in ('P','B','H') and jobTitle='Sales Rep';
+
+9. select productVendor,count(productName) from products
+group by productVendor 
+having count(productName) > 9;
+
+10. select year(orderDate),customerNumber
+from orders
+where year(orderDate) in (2003,2004);
+
+11. select productLine, max(MSRP)
+from products
+group by productLine;
+
+12. select orderNumber, count(orderNumber) as No_of_orders
+from orderDetails
+group by orderNumber
+having No_of_orders>1;
+
+13. select productVendor, productLine, count(productCode) as Total_Supply
+from products
+group by productLine, productVendor
+
+14. select productCode, productName from products
+where productDescription like "%working steering%" or
+productDescription like "%detailed engiene%" or
+productDescription like "%turnable front wheels%" or
+productDescription like "%exact replica%";
+
+15. select substring(productCode,1,3) as Pcode, sum(quantityOrdered) as PType_Sum
+from orderDetails
+where substring(productCode,1,3) in ("S10","S18","S24")
+group by Pcode
+having PType_Sum>1000;
+
+16. select city as Area_Zone from offices
+where officeCode in (select  distinct officeCode from
+employees where jobTitle like "Sales Manager %");
+
+--------------
+
+Part 3
+--------------
+
+1. select e.firstName,o.city from employees e
+join offices o on o.officeCode=e.officeCode
+where country="USA";
+
+2. select e.firstName as empName,c.customerName,c.city from employees e
+join customers c on c.salesRepEmployeeNumber=e.employeeNumber;
+
+3. select o.orderDate from orders o
+join orderDetails od on od.orderNumber=o.orderNumber
+join products p on p.productCode=od.productCode
+where p.productName="1940 Ford Pickup Truck"
+order by o.orderDate desc;
+
+4. select c.customerName,o.orderNumber,
+sum(od.priceEach * od.quantityOrdered) as total from customers c
+join orders o on c.customerNumber=o.customerNumber
+join orderdetails od on o.orderNumber=od.orderNumber
+group by c.customerName, o.orderNumber
+having  total> 25000;
+
+5. select customerName from customers
+where customerNumber in 
+(Select customerNumber from orders
+where status!="Shipped");
+
+6. select distinct productName from products p
+join orderdetails od on od.productCode=p.productCode
+join orders o on o.orderNumber=od.orderNumber
+where year(o.orderDate)="2003";
+
+7. select concat(e.firstName," ",e.lastName) as SalesRep_Name, 
+o.city, count(c.customerNumber) as no_of_customers from employees e
+join customers c on c.salesRepEmployeeNumber=e.employeeNumber
+join offices o on o.officeCode=e.officeCode
+where e.jobTitle="Sales Rep"
+group by salesRepEmployeeNumber;
+
+8. select o.officeCode, o.city, count(e.employeeNumber) as empNumber
+from employees e join offices o 
+on o.officeCode=e.officeCode
+group by o.officeCode
+having empNumber>5;
+
+9. select p.productCode, p.productName,
+sum(od.quantityOrdered) as orderedQuantity from products p
+join orderDetails od on od.productCode=p.productCode
+where p.productLine="Ships"
+group by p.productCode,p.productName;
+
+10. select c.customerName, sum(p.amount) as totalAmount from customers c
+join payments p on p.customerNumber=c.customerNumber
+group by p.customerNumber
+having totalAmount>100000;
+
+11. select c.customerName, c.country from customers c
+join orders o on o.customerNumber=c.customerNumber
+where year(orderDate)!="2003"
+group by o.customerNumber;
+
+12. select distinct p.productCode from products p
+join orderDetails od on od.productCode=p.productCode
+join orders o on o.orderNumber=od.orderNumber
+where year(orderDate)="2003"
+order by p.productCode;
+

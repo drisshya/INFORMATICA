@@ -1,0 +1,3 @@
+Identifying relationship -> child cannot exist without parent (solid line)
+Non-identifying -> child may exist without parent (dashed line)
+Recursive relationship -> same entity acts as both parent and child

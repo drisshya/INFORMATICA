@@ -1,0 +1,580 @@
+#!/bin/sh
+VAR_A=5
+VAR_B=10
+echo $VAR_A
+name="abcd"
+readonly name
+echo $name
+echo "filename: $0"
+echo "processid: $$"
+echo $?
+echo "enter the file name:"
+read fname
+w=`wc $fname`
+echo "the total number of words in a file name is: $w"
+===================================================
+
+#! /bin/bash
+no1=$1
+no2=$2
+res=`expr $no1 + $no2`
+echo "result: $res"
+
+=============================================
+
+#!/bin/sh
+
+NAME[0]="ABC"
+NAME[1]="DEF"
+NAME[2]="GHI"
+NAME[3]="JKL"
+NAME[4]="MNO"
+echo "First Index: ${NAME[0]}"
+echo "Second Index: ${NAME[1]}"
+The above example will generate the following result -
+
+$./test.sh
+First Index: ABC
+Second Index: DEF
+==================================================
+#!/bin/sh
+
+NAME[0]="prema"
+NAME[1]="mahi"
+NAME[2]="Mouni"
+NAME[3]="radhi"
+NAME[4]="nive"
+echo "First Method: ${NAME[*]}"
+echo "Second Method: ${NAME[@]}"
+
+===================================================
+
+#!/bin/bash
+
+a=100
+b=1000
+echo "sum: `expr $a + $b`"
+echo "sub: `expr $a - $b`"
+echo "mul: `expr $a \* $b`"
+echo "div: `expr $a / $b`"
+echo "modulo: `expr $a % $b`"
+echo "assign c=$a"
+if [ $a == $b ]
+then
+   echo "a is equal to b"
+fi
+
+if [ $a != $b ]
+then
+   echo "a is not equal to b"
+fi
+
+
+output:-
+---------
+[user1@localhost ~]$ ./opera.sh
+sum: 1100
+sub: -900
+mul: 100000
+div: 0
+modulo: 100
+assign c=100
+a is not equal to b
+
+
+
+===================================================
+if.else.if
+
+#!/bin/sh
+echo “Enter a number”
+read num
+if [ $num -gt 0 ]
+then
+echo “It is a positive number”
+elif [ $num -eq 0 ]
+then
+echo “num is equal to zero”
+else
+echo “It is not a positive integer”
+fi
+
+=============================================
+#!/bin/sh
+var1=unix.txt
+if [ -d $var 1 ]
+then
+echo " it is a directory"
+elif [ -x $var1  ]
+then
+echo " file  has executable mode "
+else
+echo " it is not a directory & not executable"
+fi
+=============================================
+comparison.sh
+#!/bin/bash
+
+echo enter any 3 numbers 
+read a 
+read b 
+read c 
+	if [ $a -gt $b -a $a -gt $b ] 
+		then echo the greatest no. is :$a 
+	elif [ $b -gt $a -a $b -gt $c ] 
+		then echo the greatest no. is : $b 
+	else 
+		echo the greatest no is : $c 
+	fi
+
+
+================================================
+#! /bin/bash
+file=/home/user1/test.txt
+echo "to check file is there or not is it is there then return the size"
+if [ -e $file ]
+  then
+echo -n "size:"
+     du -h test.txt
+else
+    echo "file not exits"
+fi
+
+
+output:-
+--------------
+[user1@localhost ~]$./fileop.sh
+to check file is there or not is it is there then return the size
+size:8.0K       test.txt
+
+===============================================
+#!/bin/bash
+file=/home/user1/file.txt
+if [ -s $file ]
+then
+cat $file
+else
+rm $file
+fi
+==============================================
+ #!/bin/bash
+
+FILE="opt1"
+
+if [ -w $FILE ]
+then
+  echo "$file is true"
+else
+  echo "Either $file exist or is not a writable file"
+fi
+
+================================================
+#!/bin/sh
+var1=unix.txt
+var2=true
+if [ -d $var 1 ]
+then
+echo " it is a directory"
+elif [ -w $var2 -a -d $var2 ]
+then
+echo " directory has writable mode "
+else
+echo "$var1 -a $var2 is not a directory"
+fi
+
+nested if
+
+============================================
+#!/bin/sh
+var1=rim.txt
+var2=ram.txt
+if  [  -f  $var1 ]
+then 
+echo " $var1 is a file"
+if [ -f $var1 -a -w $var1 ]
+then 
+echo " $var1 is a file and it is in writable mode"
+if [ -r $var1 -a -x $var1 ]
+then 
+echo " $var1 is a file and it is in writable mode"
+elif [ -f  $var2 ]
+then
+echo " $var2 is a file"
+fi
+fi
+else
+echo "$var1 is not a file"
+fi
+
+
+
+
+
+==========================================
+#!/bin/sh
+
+echo "Please talk to me ...say hello or bye or anything"
+  read INPUT_STRING
+  case $INPUT_STRING in
+                hello)
+                                echo "Hello yourself!"
+                                ;;
+                bye)
+                                echo "See you again!"
+                                ;;
+                *)
+                                echo "Sorry, I don't understand"
+                                ;;
+  esac
+echo "That's all folks!"
+
+
+
+
+===============================================
+#!/bin/sh
+echo “Enter a number”
+read num
+case $num in
+[0-9])
+echo “you have entered a single digit number”
+;;
+[1-9][1-9])
+echo “you have entered a two-digit number”
+;;
+[1-9][1-9][1-9])
+echo “you have entered a three-digit number”
+;;
+*)
+echo “your entry does not match any of the conditions”
+;;
+Esac
+
+
+-------------------------------------------------
+#!/bin/sh
+option=gayu.txt
+if [ -f $option ]
+then
+op=f
+elif [ -d $option ]
+then
+op=d
+else
+op=t
+fi 
+case $op in
+f)
+echo “file”
+;;
+d)
+echo “directory”
+;;
+*)
+echo “your entry does not match any of the conditions”
+;;
+esac
+================================================
+ #!/bin/bash
+for i in 1 2 3 4 5
+do
+   echo "Welcome $i times"
+done
+
+--------------------------------------
+#!/bin/bash
+for i in {1..5}
+do
+   echo "Welcome $i times"
+done
+
+-------------------------------------------
+#!/bin/bash
+echo "Bash version ${BASH_VERSION}..."
+for i in {0..10..2}
+  do 
+     echo "Welcome $i times"
+ done
+
+----------------------------
+#!/bin/bash
+for (( c=1; c<=5; c++ ))
+do  
+   echo "Welcome $c times"
+done
+
+--------------------------------------
+#!/bin/bash
+for (( ; ; ))
+do
+   echo "infinite loops [ hit CTRL+C to stop]"
+done
+==================================================
+
+#! /bin/bash
+for file in /home/user1/*.txt
+do
+echo -n "size:"
+     du -h $file
+done
+
+Output:-
+--------
+[user1@localhost ~]$ ./fileop.sh
+size:8.0K       /home/user1/myhandson.txt
+size:8.0K       /home/user1/test.txt
+=================================================
+#! /bin/bash
+
+for i in $(ls); do
+  echo item:$i
+done
+
+
+Output:-
+------------
+[user1@localhost ~]$./for.sh
+item:array.sh
+item:Desktop
+item:dir1
+item:fileop.sh
+item:for.sh
+item:movies
+item:myhandson.txt
+item:opera.sh
+item:songs
+item:test.sh
+item:test.txt
+item:var.sh
+======================================
+#!/bin/bash
+for file in /home/user1/Desktop/*.txt
+do
+if [ ! -x $file ]
+then
+  chmod 755 $file
+  echo "execute permission is set"
+fi
+done
+========================================
+
+#! /bin/bash
+for file in /dev/*
+do
+if [ -b $file ]
+then
+  echo "binary file $file"
+  echo $file >>binfile.txt
+  fi
+done
+============================================
+
+#!/bin/bash
+for file in /home/user1/Desktop/*.txt
+do
+if [ ! -s $file ]
+then
+   rm $file
+else
+  chmod a-wx  $file
+  echo "permissions are removed for $file"
+fi
+done
+
+Output:-
+---------
+
+[user1@localhost Desktop]$ bash ./file.sh
+rm: remove write-protected regular empty file `/home/user1/Desktop/file1.txt'? y
+rm: remove write-protected regular empty file `/home/user1/Desktop/file2.txt'? y
+====================================================
+/file test operators/
+#! /bin/bash
+c=0
+b=0
+d=0
+for file in /dev/*
+do
+if [ -b $file ]
+then
+  b=`expr $b + 1`
+elif [ -c $file ]
+then
+  c=`expr $c + 1`
+elif [ -d $file ]
+then
+   d=`expr $d + 1`
+fi
+done
+echo "no of binary files: $b"
+echo "no of character files: $c"
+echo "no of directories: $d"
+                         
+
+Output :-
+----------
+[user1@localhost ~]$ ./block.sh
+no of binary files: 52
+no of character files: 135
+no of directories: 10
+
+===================================================
+
+#!/bin/bash
+
+a=0
+
+while [ $a -lt 10 ]
+do
+   echo $a
+   a=`expr $a + 1`
+done
+
+
+==========================================
+#!/bin/bash
+while read f
+do
+  case $f in
+	hello)		echo English	;;
+	howdy)		echo American	;;
+	gday)		echo Australian	;;
+	bonjour)	echo French	;;
+	"guten tag")	echo German	;;
+	*)		echo Unknown Language: $f
+		;;
+   esac
+done 
+
+=============================================
+#!/bin/bash
+counter=
+factorial=1
+while [ $counter -gt 0 ]
+do
+   factorial=$(( $factorial * $counter ))
+   counter=$(( $counter - 1 ))
+done
+echo $factorial
+==============================================================
+
+#! /bin/bash
+std_names=("Nayomi" "Kalpana" "Rakshitha" "Sai")
+for element in "${std_names[@]}"
+do
+ echo "$element"
+done
+echo
+echo "No of elements: ${#std_names[@]}"
+echo
+echo "${std_names[@]}"
+
+Output:
+---------
+[user1@localhost ~]$ ./array.sh
+Nayomi
+Kalpana
+Rakshitha
+Sai
+
+No of elements: 4
+
+Nayomi Kalpana Rakshitha Sai
+--------------------------------------------
+
+
+•	if...else statement
+SYNTAX:
+if [ expression ] 
+then 
+Statement(s) to be executed if expression is true 
+fi
+----------------------------
+ if...else...fi :
+Syntax
+if [ expression ]
+then
+   Statement(s) to be executed if expression is true
+else
+   Statement(s) to be executed if expression is not true
+fi
+-------------------------------
+if elis fi:
+if [ expression 1 ]
+then
+   Statement(s) to be executed if expression 1 is true
+elif [ expression 2 ]
+then
+   Statement(s) to be executed if expression 2 is true
+elif [ expression 3 ]
+then
+   Statement(s) to be executed if expression 3 is true
+else
+   Statement(s) to be executed if no expression is true
+fi
+---------------------------------------------------
+ case...esac statement
+syntax:
+case word in
+   pattern1)
+      Statement(s) to be executed if pattern1 matches
+      ;;
+   pattern2)
+      Statement(s) to be executed if pattern2 matches
+      ;;
+   pattern3)
+      Statement(s) to be executed if pattern3 matches
+      ;;
+   *)
+     Default condition to be executed
+     ;;
+esac
+----------------------------------------------------------
+ 		
+while loop: 
+Syntax:
+
+while command
+do
+   Statement(s) to be executed if command is true
+done
+------------------------------------------
+for loop:
+Syntax
+
+for var in word1 word2 ... wordn
+do
+Statement(s) to be executed for every word.
+done
+--------------------------------------------
+UNTIL COMMAND:
+Syntax
+until command
+do
+   Statement(s) to be executed until command is true
+done
+---------------------------------------------
+SELECT:
+Syntax:
+
+select var in word1 word2 ... wordN
+do
+   Statement(s) to be executed for every word.
+done
+-----------------------------------------------------
+Shell Loop Control
+BREAK:
+Syntax
+break
+(or)
+break n
+Here n specifies the nth enclosing loop to the exit from.
+-------------------------------------------------------------------
+CONTINUE:
+Syntax
+Continue
+(Or)
+continue n
+Here n specifies the nth enclosing loop to continue from.
+-------------------------------------
+

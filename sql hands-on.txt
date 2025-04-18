@@ -1,0 +1,68 @@
+SQL HANDS-ON 
+/* PART - 1 */
+SHOW TABLES;
+SELECT * FROM products;
+select productCode, productName, (buyPrice * 1.18) as price_inclusive_of_gst
+FROM products
+WHERE (buyPrice * 1.18) > (214/2);
+
+select productCode, productName, productLine from products
+WHERE productScale like '__12';
+
+SELECT productCode, productName FROM products
+WHERE quantityInStock <= 100;
+
+SELECT productCode, productName FROM products
+WHERE quantityInStock > 5000 AND quantityInStock < 10000;
+
+SELECT productCode, productName FROM products
+WHERE productName like '%Ford%';
+
+SELECT productName, productVendor, productLine FROM products
+WHERE productLine != 'Planes' and productLine LIKE '%Classic%';
+
+SELECT productCode, productName, productLine, quantityInStock FROM products 
+WHERE quantityInStock > 5000 and productLine IN ('Planes','Ships','Motorcycles');
+
+SELECT productCode, productName, MSRP FROM products
+WHERE MSRP-buyPrice > buyPrice/2;
+
+SELECT * FROM orderdetails;
+SELECT orderNumber, productCode, quantityOrdered FROM orderdetails WHERE quantityOrdered > 50 and quantityOrdered < 100 
+and priceEach >= 100;
+
+SELECT * FROM orders;
+SELECT orderNumber, orderDate FROM orders
+WHERE status != 'Shipped';
+
+SELECT orderNumber, orderDate FROM orders
+WHERE orderDate BETWEEN '2003-01-01' AND '2003-07-01';
+
+SHOW TABLES;
+SELECT * FROM employees;
+
+SELECT * FROM customers;
+SELECT employeeNumber, firstName FROM employees WHERE officeCode != 1;
+SELECT concat(contactFirstName," ",contactLastName) as Name,
+concat(addressLine1," ",addressLine2," ",city," ",state," ",postalCode,".",country) as Address FROM customers;
+
+/*  Part - 2 */
+
+SELECT * FROM orderdetails;
+SELECT productCode, quantityOrdered FROM orderdetails
+WHERE productCode LIKE '%S700_%';
+
+SELECT employeeNumber, firstName, substring(extension,2)
+FROM employees;
+
+SELECT productCode, sum(quantityOrdered) AS s_ FROM orderdetails
+GROUP BY productCode
+having s_ > 1000;
+
+SHOW TABLES;
+SELECT * FROM products;
+
+SELECT * FROM orders;
+SELECT year(orderDate), count(orderNumber) FROM orders 
+GROUP BY year(orderDate)
+HAVING count(orderNumber) > 5;

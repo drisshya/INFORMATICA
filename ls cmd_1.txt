@@ -1,0 +1,61 @@
+How To List All Files And Directories ?
+	ubuntu@ubuntu:~$ ls
+
+How To List All Files And Directories In Long Listing Format ?
+	ubuntu@ubuntu:~$ ls -l
+
+Column 1 indicates information regarding file permission.
+Column 2 indicates a number of links to the file.
+Column 3 & 4 indicates owner and group information.
+Column 5 indicates size of the file in bytes.
+Column 6 shows date and time on which file was recently modified.
+Column 7 shows the file fie or directory name.
+
+Display or list all directories in Unix
+	$ ls -l | grep `^d'
+	$ ls -l | egrep `^d'
+	$ dir
+
+command to display list only files in Linux or Unix
+	$ ls -l | grep -v '^d'
+	$ ls -l | grep -v '^d'
+How To List Recursive List Of Files And Directories ?	
+	ubuntu@ubuntu:~$ ls -R
+
+How To Give The File Listing In Reverse Order ?	
+	ubuntu@ubuntu:~$ ls -r
+
+How To List All The Files Identifying Directories And Executable Files ?
+	ubuntu@ubuntu:~$ ls -f
+How To List All The File Names Sorted By Last Modification time ?
+	ubuntu@ubuntu:~$ ls -t
+
+How To Display All Files Sorted According To The Extension ?
+	ubuntu@ubuntu:~$ ls -X
+
+How To Display All Files Sorted According To The Extension In Reverse Order ?
+	ubuntu@ubuntu:~$ ls -rX
+
+How To display All Files Sorted According To The Modification Time In Reverse ?
+	ubuntu@ubuntu:~$ ls -tr
+
+How To Display Detailed Listing Including Hidden Files Sorted In Reverse Order ?
+	ubuntu@ubuntu:~$ ls -lar
+
+How To List The Content Of Any Directory ? (e.x. geekstrick)
+	ubuntu@ubuntu:~$ ls geekstrick
+How To List All Files Name With One Source At A Time ?
+	ubuntu@ubuntu:~$ ls |more
+
+How To List All dir With five Character name content inside dir?
+	ubuntu@ubuntu:~$ ls ?????
+
+How To List All File Name Starting With Uppercase Letter ‘D’ ?
+	ubuntu@ubuntu:~$ ls D*
+How To List All File Name Starting With Vowels ?
+	ubuntu@ubuntu:~$ ls [a,e,i,o,u]*
+How To List All The File Name In Which First Character Is An Uppercase Letter And Second Character Is A Digit ?
+	ubuntu@ubuntu:~$ ls [A-Z][0-9]*
+How To List All File Name Whose First Character Is Any Thing Or Then A Small Case Letter Vowel ?
+	ubuntu@ubuntu:~$ ls [^a,e,i,o,u]*	
+
